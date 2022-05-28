@@ -1,32 +1,35 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar app color="primary" dark>
+
+      
+
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+      <v-toolbar-title>CÁTALOGO</v-toolbar-title>
+
+      <v-navigation-drawer app v-model="drawer" temporary>
+        
+      </v-navigation-drawer>
+
+      <v-spacer></v-spacer>
+
+      <v-btn class="">ANDROID</v-btn>
+      <v-btn>WEB</v-btn>
+      <v-btn>REALIZA TU TEST</v-btn>
+    </v-app-bar>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-nav {
-  padding: 30px;
-}
+export default {
+  name: 'App',
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+  data(){
+    return {
+      drawer: false
+    };
+  },
+};
+</script>
