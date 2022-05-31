@@ -5,7 +5,7 @@
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>CATÁLOGO</v-toolbar-title>
-
+      <!--https://github.com/tkhquang/vue-simple-accordion-->
       <!--El atributo temporary indica que se puede deshabilitar el elemento-->
       <v-navigation-drawer app v-model="drawer" temporary>
         <div v-for="(group, name) in groups" :key="group">
