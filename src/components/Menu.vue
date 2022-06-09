@@ -7,25 +7,28 @@
           mdi-chevron-right
         </v-icon>
         ANDROID
+
+        <div class="contenidoMenu">
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+          <p>Hola</p>
+        </div>
+
       </div>
 
-      <div class="subelementos">
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-      </div>
+      
     </div>
     
     <div id="web">
@@ -35,6 +38,23 @@
         mdi-chevron-right
       </v-icon>
       WEB
+      <div class="contenidoMenu">
+        <p>gfd</p>
+        <p>asd</p>
+        <p>Adios</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Adios</p>
+      </div>
     </div>
 
     <div id="test">
@@ -50,9 +70,6 @@
 </template>
 
 <script>
-  const app = new Vue({
-
-  })
 
   export default {
     name: 'menuVertical',
@@ -70,13 +87,9 @@
 
 <style>
   #menuMain{
-    display: flex;
-    flex-wrap: wrap;
   }
 
   #android{
-    display: flex;
-    flex-wrap: wrap;
     width: 90%;
     height: 30px;
     margin-left: 11px;
@@ -85,8 +98,6 @@
   }
 
   #web{
-    display: flex;
-    align-items: center;
     width: 90%;
     height: 30px;
     margin-left: 11px;
@@ -95,8 +106,6 @@
   }
 
   #test{
-    display: flex;
-    align-items: center;
     width: 90%;
     height: 30px;
     margin-left: 11px;
@@ -108,10 +117,10 @@
     width: 100%;
   }
 
-  .subelementos{
+  .contenidoMenu{
     width: 100%;
-    height: 0px;
-    visibility: hidden;
+    height: 300px;
+    overflow-y: hidden;
     background-color: blueviolet;
   }
 </style>
