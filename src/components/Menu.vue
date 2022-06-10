@@ -1,47 +1,31 @@
 <template>
   <div id="menuMain">
 
-    <div id="android">
-      <div class="menuAndroid">
-        <v-icon large>
-          mdi-chevron-right
-        </v-icon>
-        ANDROID
-
-        <div class="contenidoMenu">
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-          <p>Hola</p>
-        </div>
-
+    <div id="android" @click="saludar">
+      <v-icon large>
+        mdi-chevron-right
+      </v-icon>
+      ANDROID
+      <div class="subelementos">
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>Hola</p>
+        <p>ADRI</p>
+        <p>anabel</p>
+        <p>Hola</p>
+        <p>Hola</p>
       </div>
-
-      
     </div>
     
     <div id="web">
-      <v-icon
-        large
-      >
+      <v-icon large>
         mdi-chevron-right
       </v-icon>
       WEB
-      <div class="contenidoMenu">
-        <p>gfd</p>
-        <p>asd</p>
-        <p>Adios</p>
+      <div>
         <p>Hola</p>
         <p>Hola</p>
         <p>Hola</p>
@@ -53,14 +37,11 @@
         <p>Hola</p>
         <p>Hola</p>
         <p>Hola</p>
-        <p>Adios</p>
       </div>
     </div>
 
     <div id="test">
-      <v-icon
-        large
-      >
+      <v-icon large>
         mdi-chevron-right
       </v-icon>
       TEST
@@ -70,38 +51,57 @@
 </template>
 
 <script>
+  new Vue({
+    el: '#android',
+    methods: {
+      saludar: function(){
+        alert("hola");
+      }
+    }
+  })
 
   export default {
     name: 'menuVertical',
 
-    data: {
-      elementos: [ 
-        {nombre: 'Android', 
-        listaItems: 'Principios'},
-        'Web',
-        'Test'
-      ]
+    data() {
+      return{
+        
+      };
     },
   }
 </script>
 
 <style>
   #menuMain{
+    border: 2px solid black;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: whitesmoke;
   }
 
   #android{
     width: 90%;
-    height: 30px;
+    max-height: 300px;
     margin-left: 11px;
     background-color: lightblue;
     margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+  }
+
+  #android:hover{
+    background-color: #91a9b1;
   }
 
   #web{
     width: 90%;
-    height: 30px;
+    max-height: 300px;
+    height: 100%;
     margin-left: 11px;
-    background-color: lightblue;
+    background-color: lightgreen;
     margin-bottom: 5px;
   }
 
@@ -109,18 +109,13 @@
     width: 90%;
     height: 30px;
     margin-left: 11px;
-    background-color: lightblue;
+    background-color: lightcoral;
   }
 
-  .menuAndroid{
-    background-color: tomato;
+  .subelementos{
     width: 100%;
-  }
-
-  .contenidoMenu{
-    width: 100%;
-    height: 300px;
-    overflow-y: hidden;
-    background-color: blueviolet;
+    max-height: 0;
+    overflow: hidden;
+    height: 100%;
   }
 </style>
