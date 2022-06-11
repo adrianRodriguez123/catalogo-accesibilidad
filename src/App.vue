@@ -1,4 +1,5 @@
 <template>
+
   <div id="app">
     <div id="main">
       <div class="nav"></div>
@@ -27,10 +28,8 @@
     <!--https://github.com/tkhquang/vue-simple-accordion-->
   
 </template>
-
 <script>
 import Menu from "./components/Menu.vue"
-
 export default {
   name: 'App',
 

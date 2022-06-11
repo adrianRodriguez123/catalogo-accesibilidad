@@ -1,12 +1,12 @@
 <template>
   <div id="menuMain">
 
-    <div id="android" @click="saludar">
+    <div id="android" v-on:click="open">
       <v-icon large>
         mdi-chevron-right
       </v-icon>
       ANDROID
-      <div class="subelementos">
+      <div v-class="{open: subelementos}">
         <p>Hola</p>
         <p>Hola</p>
         <p>Hola</p>
@@ -14,7 +14,6 @@
         <p>Hola</p>
         <p>Hola</p>
         <p>ADRI</p>
-        <p>anabel</p>
         <p>Hola</p>
         <p>Hola</p>
       </div>
@@ -51,24 +50,21 @@
 </template>
 
 <script>
-  new Vue({
-    el: '#android',
-    methods: {
-      saludar: function(){
-        alert("hola");
-      }
-    }
-  })
 
   export default {
     name: 'menuVertical',
-
-    data() {
+    data (){
       return{
-        
-      };
+        isOpen: false
+      }
     },
+    methods: {
+      open: function(){
+        this.isOpen = !this.isOpen;
+      }
+    }
   }
+
 </script>
 
 <style>
