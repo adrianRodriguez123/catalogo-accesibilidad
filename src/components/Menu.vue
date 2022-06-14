@@ -1,12 +1,12 @@
 <template>
   <div id="menuMain">
 
-    <div id="android" v-on:click="open">
+    <div id="android" @click="saludar(isOpen)">
       <v-icon large>
         mdi-chevron-right
       </v-icon>
       ANDROID
-      <div v-class="{open: subelementos}">
+      <div :class="{subelementos: isOpen}">
         <p>Hola</p>
         <p>Hola</p>
         <p>Hola</p>
@@ -55,13 +55,18 @@
     name: 'menuVertical',
     data (){
       return{
-        isOpen: false
+        isOpen: true //si está a true está escondido
       }
     },
     methods: {
-      open: function(){
-        this.isOpen = !this.isOpen;
-      }
+      saludar: function (m) {
+        console.log("aaaa "+m);
+        if(m){
+          console.log("está escondido");
+          isOpen = false;
+        }
+        //console.log(m+" isOpen "+isOpen);
+    }
     }
   }
 
