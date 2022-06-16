@@ -1,30 +1,25 @@
 <template>
   <div id="menuMain">
 
-    <div id="android" @click="saludar(isOpen)">
+    <div id="android" @click="isOpen = !isOpen">
       <v-icon large>
         mdi-chevron-right
       </v-icon>
       ANDROID
-      <div :class="{subelementos: isOpen}">
+      <!--<div :class="{subelementos: isOpen}">
         <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>Hola</p>
-        <p>ADRI</p>
-        <p>Hola</p>
+      </div>-->
+      <div :class="compClasses">
         <p>Hola</p>
       </div>
     </div>
     
-    <div id="web">
+    <div id="web" @click="isOpen = !isOpen">
       <v-icon large>
         mdi-chevron-right
       </v-icon>
       WEB
-      <div>
+      <div :class="compClasses">
         <p>Hola</p>
         <p>Hola</p>
         <p>Hola</p>
@@ -58,16 +53,15 @@
         isOpen: true //si está a true está escondido
       }
     },
-    methods: {
-      saludar: function (m) {
-        console.log("aaaa "+m);
-        if(m){
-          console.log("está escondido");
-          isOpen = false;
+    computed: {
+      compClasses: function(){
+        return {
+          subelementos: this.isOpen,
+
         }
-        //console.log(m+" isOpen "+isOpen);
+      }
     }
-    }
+    
   }
 
 </script>
@@ -100,10 +94,15 @@
   #web{
     width: 90%;
     max-height: 300px;
-    height: 100%;
+    
     margin-left: 11px;
     background-color: lightgreen;
-    margin-bottom: 5px;
+    margin-bottom: 5px;cursor: pointer;
+    transition: background-color 0.2s linear;
+  }
+
+  #web:hover{
+    background-color: #91a9b1;
   }
 
   #test{
@@ -111,6 +110,12 @@
     height: 30px;
     margin-left: 11px;
     background-color: lightcoral;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+  }
+
+  #test:hover{
+    background-color: #91a9b1;
   }
 
   .subelementos{
