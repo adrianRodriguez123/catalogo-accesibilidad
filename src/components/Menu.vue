@@ -6,14 +6,24 @@
         mdi-chevron-right
       </v-icon>
       ANDROID
-    </div>
-    <div :class="{subelementos: isOpenAndroid, colorFondo: true}">
-      <div class="subelementos2">
-        <p class="subelementos3">Hola</p>
-        <p class="subelementos3">Hola</p>
-        <p class="subelementos3">Hola</p>
-        <p class="subelementos3">Hola</p>
-        <p class="subelementos3">Hola</p>
+    
+      <div :class="{subelementos: isOpenAndroid}">
+        <div class="subelementos2">
+          <p class="subelementos3" @click="saludar">Principios</p>
+          <p class="subelementos3" @click="saludar">Requisitos y recomendaciones</p>
+          <p class="subelementos3" @click="saludar">Casos especiales</p>
+          <p class="subelementos3" @click="saludar">Textos hard-coded</p>
+          <p class="subelementos3" @click="saludar">Internacionalización de los números</p>
+          <p class="subelementos3" @click="saludar">Internacionalización de las fechas</p>
+          <p class="subelementos3" @click="saludar">Tecnologías de apoyo</p>
+          <p class="subelementos3" @click="saludar">Jerarquía</p>
+          <p class="subelementos3" @click="saludar">Colores y contrase</p>
+          <p class="subelementos3" @click="saludar">Layouts y tipografía</p>
+          <p class="subelementos3" @click="saludar">Strings</p>
+          <p class="subelementos3" @click="saludar">Imágenes</p>
+          <p class="subelementos3" @click="saludar">Sonidos y movimiento</p>
+          <p class="subelementos3" @click="saludar">Apps</p>
+        </div>
       </div>
     </div>
     
@@ -24,12 +34,11 @@
       WEB
       <div :class="{subelementos: isOpenWeb}">
         <div class="subelementos2">
-          <p class="subelementos3">Hola</p>
-          <p class="subelementos3">Hola</p>
-          <p class="subelementos3">Hola</p>
-          <p class="subelementos3">Hola</p>
-          <p class="subelementos3">Hola</p>
-          <p class="subelementos3">Hola</p>
+          <p class="subelementos3" @click="saludar">Perceptible</p>
+          <p class="subelementos3" @click="saludar">Operable</p>
+          <p class="subelementos3" @click="saludar">Comprensible</p>
+          <p class="subelementos3" @click="saludar">Robusto</p>
+          <p class="subelementos3" @click="saludar">Conformidad</p>
         </div>
       </div>
     </div>
@@ -54,6 +63,11 @@
         isOpenWeb: true //si está a true está escondido
       }
     },
+    methods: {
+      saludar: function(texto){
+        alert("hola mundo " + texto)
+      }
+    }
   }
 
 </script>
@@ -61,7 +75,7 @@
 <style>
   #menuMain{
     width: 100%;
-    height: 1000px;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -70,7 +84,7 @@
 
   .principalesMenu{
     width: 90%;
-    max-height: 300px;
+    max-height: 500px;
     margin-left: 11px;
     background-color: lightblue;
     margin-bottom: 5px;
@@ -95,7 +109,7 @@
   }
 
   .subelementos2{
-    margin-left: 10%;
+    margin-left: 14%;
   }
 
   .subelementos3{
@@ -106,10 +120,5 @@
     background-color: whitesmoke;
     display: inline-block;
     cursor: pointer;
-  }
-
-  .colorFondo{
-    background-color: lightblue;
-    width: 90%;
   }
 </style>
