@@ -202,7 +202,7 @@
             </div>
 
             <div class="textoAndroid">
-                <h1>Apps</h1>
+                <h1 id="apps">Apps</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan eget velit et mollis. Morbi convallis commodo venenatis. 
                     Integer id sapien varius, tristique sem sit amet, sodales sem. Etiam vitae arcu urna. Quisque venenatis commodo nibh, sit amet 
@@ -228,11 +228,15 @@
     }
 
     #textoWebPrincipal{
-        display: none;
+        display: inline;
     }
 
     .textoWeb{
         margin-bottom: 20px;
+    }
+
+    #textoAndroidPrincipal{
+        display: none;
     }
 
     .textoAndroid{

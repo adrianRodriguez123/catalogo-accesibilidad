@@ -9,20 +9,20 @@
     
       <div :class="{subelementos: isOpenAndroid}">
         <div class="subelementos2">
-          <p class="subelementos3" @click="saludar">Principios</p>
-          <p class="subelementos3" @click="saludar">Requisitos y recomendaciones</p>
-          <p class="subelementos3" @click="saludar">Casos especiales</p>
-          <p class="subelementos3" @click="saludar">Textos hard-coded</p>
-          <p class="subelementos3" @click="saludar">Internacionalización de los números</p>
-          <p class="subelementos3" @click="saludar">Internacionalización de las fechas</p>
-          <p class="subelementos3" @click="saludar">Tecnologías de apoyo</p>
-          <p class="subelementos3" @click="saludar">Jerarquía</p>
-          <p class="subelementos3" @click="saludar">Colores y contrase</p>
-          <p class="subelementos3" @click="saludar">Layouts y tipografía</p>
-          <p class="subelementos3" @click="saludar">Strings</p>
-          <p class="subelementos3" @click="saludar">Imágenes</p>
-          <p class="subelementos3" @click="saludar">Sonidos y movimiento</p>
-          <p class="subelementos3" @click="saludar">Apps</p>
+          <p v-scroll-to="'#apps'" class="subelementos3" @click="menuClick('android')">Principios</p>
+          <p class="subelementos3" @click="menuClick('android')">Requisitos y recomendaciones</p>
+          <p class="subelementos3" @click="menuClick('android')">Casos especiales</p>
+          <p class="subelementos3" @click="menuClick('android')">Textos hard-coded</p>
+          <p class="subelementos3" @click="menuClick('android')">Internacionalización de los números</p>
+          <p class="subelementos3" @click="menuClick('android')">Internacionalización de las fechas</p>
+          <p class="subelementos3" @click="menuClick('android')">Tecnologías de apoyo</p>
+          <p class="subelementos3" @click="menuClick('android')">Jerarquía</p>
+          <p class="subelementos3" @click="menuClick('android')">Colores y contrase</p>
+          <p class="subelementos3" @click="menuClick('android')">Layouts y tipografía</p>
+          <p class="subelementos3" @click="menuClick('android')">Strings</p>
+          <p class="subelementos3" @click="menuClick('android')">Imágenes</p>
+          <p class="subelementos3" @click="menuClick('android')">Sonidos y movimiento</p>
+          <p class="subelementos3" @click="menuClick('android')">Apps</p>
         </div>
       </div>
     </div>
@@ -34,11 +34,11 @@
       WEB
       <div :class="{subelementos: isOpenWeb}">
         <div class="subelementos2">
-          <p class="subelementos3" @click="saludar">Perceptible</p>
-          <p class="subelementos3" @click="saludar">Operable</p>
-          <p class="subelementos3" @click="saludar">Comprensible</p>
-          <p class="subelementos3" @click="saludar">Robusto</p>
-          <p class="subelementos3" @click="saludar">Conformidad</p>
+          <p class="subelementos3" @click="menuClick('web')">Perceptible</p>
+          <p class="subelementos3" @click="menuClick('web')">Operable</p>
+          <p class="subelementos3" @click="menuClick('web')">Comprensible</p>
+          <p class="subelementos3" @click="menuClick('web')">Robusto</p>
+          <p class="subelementos3" @click="menuClick('web')">Conformidad</p>
         </div>
       </div>
     </div>
@@ -49,10 +49,10 @@
       </v-icon>
       TEST
     </div>
-
+    
   </div>
 </template>
-
+<script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
 <script>
 
   export default {
@@ -64,8 +64,14 @@
       }
     },
     methods: {
-      saludar: function(texto){
-        alert("hola mundo " + texto)
+      menuClick: function(texto){
+        if(texto === 'android'){
+          document.getElementById("textoAndroidPrincipal").style.display = "inline";
+          document.getElementById("textoWebPrincipal").style.display = "none";
+        }else if(texto === 'web'){
+          document.getElementById("textoAndroidPrincipal").style.display = "none";
+          document.getElementById("textoWebPrincipal").style.display = "inline";
+        }
       }
     }
   }
