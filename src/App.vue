@@ -14,6 +14,8 @@
 <script>
 import Menu from "./components/Menu.vue"
 import Texto from "./components/Texto.vue"
+
+
 export default {
   name: 'App',
 

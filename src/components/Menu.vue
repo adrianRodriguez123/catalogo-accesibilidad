@@ -9,7 +9,7 @@
     
       <div :class="{subelementos: isOpenAndroid}">
         <div class="subelementos2">
-          <p v-scroll-to="'#apps'" class="subelementos3" @click="menuClick('android')">Principios</p>
+          <p v-scroll-to="'#prueba'" class="subelementos3" @click="menuClick('android')">Principios</p>
           <p class="subelementos3" @click="menuClick('android')">Requisitos y recomendaciones</p>
           <p class="subelementos3" @click="menuClick('android')">Casos especiales</p>
           <p class="subelementos3" @click="menuClick('android')">Textos hard-coded</p>
@@ -49,11 +49,21 @@
       </v-icon>
       TEST
     </div>
+    <button v-scroll-to="{ el: '#prueba' }">
+      Scroll to #element
+    </button>
+
+    <div id="prueba">
+      <p>adadassd</p>
+    </div>
     
   </div>
 </template>
-<script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+
 <script>
+
+
+
 
   export default {
     name: 'menuVertical',
@@ -126,5 +136,11 @@
     background-color: whitesmoke;
     display: inline-block;
     cursor: pointer;
+  }
+
+  #prueba{
+    position: absolute;
+    bottom: -551px;
+    
   }
 </style>
