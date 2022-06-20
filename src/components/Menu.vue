@@ -9,20 +9,20 @@
     
       <div :class="{subelementos: isOpenAndroid}">
         <div class="subelementos2">
-          <p v-scroll-to="'#prueba'" class="subelementos3" @click="menuClick('android')">Principios</p>
-          <p class="subelementos3" @click="menuClick('android')">Requisitos y recomendaciones</p>
-          <p class="subelementos3" @click="menuClick('android')">Casos especiales</p>
-          <p class="subelementos3" @click="menuClick('android')">Textos hard-coded</p>
-          <p class="subelementos3" @click="menuClick('android')">Internacionalización de los números</p>
-          <p class="subelementos3" @click="menuClick('android')">Internacionalización de las fechas</p>
-          <p class="subelementos3" @click="menuClick('android')">Tecnologías de apoyo</p>
-          <p class="subelementos3" @click="menuClick('android')">Jerarquía</p>
-          <p class="subelementos3" @click="menuClick('android')">Colores y contrase</p>
-          <p class="subelementos3" @click="menuClick('android')">Layouts y tipografía</p>
-          <p class="subelementos3" @click="menuClick('android')">Strings</p>
-          <p class="subelementos3" @click="menuClick('android')">Imágenes</p>
-          <p class="subelementos3" @click="menuClick('android')">Sonidos y movimiento</p>
-          <p class="subelementos3" @click="menuClick('android')">Apps</p>
+          <p v-scroll-to="'#principio'" class="subelementos3" @click="menuClick('android')">Principios</p>
+          <p v-scroll-to="'#requisitos'" class="subelementos3" @click="menuClick('android')">Requisitos y recomendaciones</p>
+          <p v-scroll-to="'#especial'" class="subelementos3" @click="menuClick('android')">Casos especiales</p>
+          <p v-scroll-to="'#hardcoded'" class="subelementos3" @click="menuClick('android')">Textos hard-coded</p>
+          <p v-scroll-to="'#numero'" class="subelementos3" @click="menuClick('android')">Internacionalización de los números</p>
+          <p v-scroll-to="'#fecha'" class="subelementos3" @click="menuClick('android')">Internacionalización de las fechas</p>
+          <p v-scroll-to="'#apoyo'" class="subelementos3" @click="menuClick('android')">Tecnologías de apoyo</p>
+          <p v-scroll-to="'#jerarquia'" class="subelementos3" @click="menuClick('android')">Jerarquía</p>
+          <p v-scroll-to="'#color'" class="subelementos3" @click="menuClick('android')">Colores y contrase</p>
+          <p v-scroll-to="'#layout'" class="subelementos3" @click="menuClick('android')">Layouts y tipografía</p>
+          <p v-scroll-to="'#strings'" class="subelementos3" @click="menuClick('android')">Strings</p>
+          <p v-scroll-to="'#imagenes'" class="subelementos3" @click="menuClick('android')">Imágenes</p>
+          <p v-scroll-to="'#sonidos'" class="subelementos3" @click="menuClick('android')">Sonidos y movimiento</p>
+          <p v-scroll-to="'#apps'" class="subelementos3" @click="menuClick('android')">Apps</p>
         </div>
       </div>
     </div>
@@ -34,11 +34,11 @@
       WEB
       <div :class="{subelementos: isOpenWeb}">
         <div class="subelementos2">
-          <p class="subelementos3" @click="menuClick('web')">Perceptible</p>
-          <p class="subelementos3" @click="menuClick('web')">Operable</p>
-          <p class="subelementos3" @click="menuClick('web')">Comprensible</p>
-          <p class="subelementos3" @click="menuClick('web')">Robusto</p>
-          <p class="subelementos3" @click="menuClick('web')">Conformidad</p>
+          <p v-scroll-to="'#perceptible'" class="subelementos3" @click="menuClick('web')">Perceptible</p>
+          <p v-scroll-to="'#operable'" class="subelementos3" @click="menuClick('web')">Operable</p>
+          <p v-scroll-to="'#comprensible'" class="subelementos3" @click="menuClick('web')">Comprensible</p>
+          <p v-scroll-to="'#robusto'" class="subelementos3" @click="menuClick('web')">Robusto</p>
+          <p v-scroll-to="'#conformidad'" class="subelementos3" @click="menuClick('web')">Conformidad</p>
         </div>
       </div>
     </div>
@@ -49,21 +49,12 @@
       </v-icon>
       TEST
     </div>
-    <button v-scroll-to="{ el: '#prueba' }">
-      Scroll to #element
-    </button>
 
-    <div id="prueba">
-      <p>adadassd</p>
-    </div>
     
   </div>
 </template>
 
 <script>
-
-
-
 
   export default {
     name: 'menuVertical',

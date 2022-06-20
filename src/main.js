@@ -3,10 +3,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
-import scrollto from 'vue-scrollto'
 import '@babel/polyfill'
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
+
+import VueScrollTo from 'vue-scrollto'
+
+Vue.use(VueScrollTo)
 
 Vue.config.productionTip = false
 
@@ -14,6 +17,5 @@ new Vue({
   router,
   store,
   vuetify,
-  scrollto,
   render: h => h(App)
 }).$mount('#app')
