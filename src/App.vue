@@ -14,14 +14,15 @@
 <script>
 import Menu from "./components/Menu.vue"
 import Texto from "./components/Texto.vue"
-
+import Test from "./components/Test.vue"
 
 export default {
   name: 'App',
 
   components: {
     Menu,
-    Texto
+    Texto,
+    Test
   },
 
   data(){

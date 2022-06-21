@@ -49,7 +49,7 @@
       </v-icon>
       TEST
     </div>
-
+{{ info }}
     
   </div>
 </template>
@@ -61,7 +61,8 @@
     data (){
       return{
         isOpenAndroid: true,
-        isOpenWeb: true //si está a true está escondido
+        isOpenWeb: true,//si está a true está escondido
+        info: null
       }
     },
     methods: {
@@ -74,7 +75,12 @@
           document.getElementById("textoWebPrincipal").style.display = "inline";
         }
       }
-    }
+    },
+    mounted() {
+        axios
+      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(response => (this.info = response))
+    },
   }
 
 </script>
