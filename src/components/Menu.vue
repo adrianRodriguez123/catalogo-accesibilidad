@@ -49,13 +49,12 @@
       </v-icon>
       TEST
     </div>
-{{ info }}
     
   </div>
 </template>
 
 <script>
-
+import axios from "axios";
   export default {
     name: 'menuVertical',
     data (){
@@ -75,11 +74,11 @@
           document.getElementById("textoWebPrincipal").style.display = "inline";
         }
       }
-    },
-    mounted() {
+    },//https://codingpotions.com/vue-axios
+    created() {
         axios
-      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => (this.info = response))
+      .get('https://jsonplaceholder.typicode.com/todos/1')
+      .then((response) => {console.log(response)})
     },
   }
 
