@@ -214,16 +214,107 @@
             </div>
         </div>
 
-        <div id="textoTestPrincipal">
+        <!--<div id="textoTestPrincipal">
             <h1 id="urlTest">URL TEST: XXXXXXXXXXXXXXXXXX</h1>
             
-        </div>
+            <div class="testContenido" id="errores">
+                <p style="font-size: 25px">{{ numErrores.error }} errores</p>
+
+                <ul class="listaTest">
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    
+                </ul>
+            </div>
+
+            <div class="testContenido" id="erroresContraste">
+                <p style="font-size: 25px">X errores de contraste</p>
+
+                <ul class="listaTest">
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    
+                </ul>
+            </div>
+
+            <div class="testContenido" id="alertas">
+                <p style="font-size: 25px">X alertas</p>
+
+                <ul class="listaTest">
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    
+                </ul>
+            </div>
+
+            <div class="testContenido" id="caracteristicas">
+                <p style="font-size: 25px">X características</p>
+
+                <ul class="listaTest">
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    
+                </ul>
+            </div>
+
+            <div class="testContenido" id="elementosEstructurales">
+                <p style="font-size: 25px">X elementos estructurales</p>
+
+                <ul class="listaTest">
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    
+                </ul>
+            </div>
+
+            <div class="testContenido" id="elementosAria">
+                <p style="font-size: 25px">X elementos ARIA</p>
+
+                <ul class="listaTest">
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    <li>hola</li>
+                    
+                </ul>
+            </div>
+        </div>-->
     </div>
 
 </template>
 
 <script>
+import axios from "axios";
 
+export default{
+    /*data(){
+        return{
+            result: null
+        }
+    },
+//https://codingpotions.com/vue-axios
+  created() { 
+      axios
+    .get('https://jsonplaceholder.typicode.com/todos/1')//https://wave.webaim.org/api/request?key={yourAPIkey}&url=https://google.com/  https://jsonplaceholder.typicode.com/todos/1
+
+    .then((result) => {
+        //this.result = result.data.categories;//result.data.categories
+        console.log(this.result);
+    })
+  },
+
+ */ 
+}
 </script>
 
 <style>
@@ -242,10 +333,26 @@
     }
 
     #textoTestPrincipal{
-        display: none;
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
     }
 
     .texto{
         margin-bottom: 20px;
+    }
+
+    .testContenido{
+        border: 2px solid black;
+        width: 100%;
+        height: 200px;
+        margin-top: 25px;
+    }
+
+    .listaTest{
+        margin-left: 25px;
+        margin-top: 20px;
+        font-size: 20px;
     }
 </style>

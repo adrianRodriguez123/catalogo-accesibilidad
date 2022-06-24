@@ -59,7 +59,6 @@
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   name: 'menuVertical',
@@ -92,12 +91,7 @@ export default {
 
       }
     }
-  },//https://codingpotions.com/vue-axios
-  created() {
-      axios
-    .get('https://jsonplaceholder.typicode.com/todos/1')
-    .then((response) => {console.log(response)})
-  },
+  }
 }
 
 </script>
