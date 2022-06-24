@@ -43,11 +43,16 @@
       </div>
     </div>
 
-    <div id="test">
+    <div class="principalesMenu" @click="isOpenTest = !isOpenTest">
       <v-icon large>
         mdi-chevron-right
       </v-icon>
       TEST
+      <div :class="{subelementos: isOpenTest}">
+        <div class="subelementos2">
+          <p v-scroll-to="'#urlTest'" class="subelementos3" @click="menuClick('test')">Realiza tu test</p>
+        </div>
+      </div>
     </div>
     
   </div>
@@ -55,32 +60,45 @@
 
 <script>
 import axios from "axios";
-  export default {
-    name: 'menuVertical',
-    data (){
-      return{
-        isOpenAndroid: true,
-        isOpenWeb: true,//si está a true está escondido
-        info: null
+
+export default {
+  name: 'menuVertical',
+  data (){
+    return{
+      isOpenAndroid: true,
+      isOpenWeb: true,//si está a true está escondido
+      isOpenTest: true
+    }
+  },
+  methods: {
+    menuClick: function(texto){
+      if(texto === 'android'){
+        console.log("android");
+        document.getElementById("textoAndroidPrincipal").style.display = "inline";
+        document.getElementById("textoWebPrincipal").style.display = "none";
+        document.getElementById("textoTestPrincipal").style.display = "none";
+
+      }else if(texto === 'web'){
+        console.log("web");
+        document.getElementById("textoAndroidPrincipal").style.display = "none";
+        document.getElementById("textoWebPrincipal").style.display = "inline";
+        document.getElementById("textoTestPrincipal").style.display = "none";
+
+      }else if(texto === 'test'){
+        console.log("test");
+        document.getElementById("textoAndroidPrincipal").style.display = "none";
+        document.getElementById("textoWebPrincipal").style.display = "none";
+        document.getElementById("textoTestPrincipal").style.display = "inline";
+
       }
-    },
-    methods: {
-      menuClick: function(texto){
-        if(texto === 'android'){
-          document.getElementById("textoAndroidPrincipal").style.display = "inline";
-          document.getElementById("textoWebPrincipal").style.display = "none";
-        }else if(texto === 'web'){
-          document.getElementById("textoAndroidPrincipal").style.display = "none";
-          document.getElementById("textoWebPrincipal").style.display = "inline";
-        }
-      }
-    },//https://codingpotions.com/vue-axios
-    created() {
-        axios
-      .get('https://jsonplaceholder.typicode.com/todos/1')
-      .then((response) => {console.log(response)})
-    },
-  }
+    }
+  },//https://codingpotions.com/vue-axios
+  created() {
+      axios
+    .get('https://jsonplaceholder.typicode.com/todos/1')
+    .then((response) => {console.log(response)})
+  },
+}
 
 </script>
 
@@ -100,15 +118,6 @@ import axios from "axios";
     margin-left: 11px;
     background-color: lightblue;
     margin-bottom: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s linear;
-  }
-
-  #test{
-    width: 90%;
-    height: 30px;
-    margin-left: 11px;
-    background-color: lightblue;
     cursor: pointer;
     transition: background-color 0.2s linear;
   }
@@ -134,9 +143,4 @@ import axios from "axios";
     cursor: pointer;
   }
 
-  #prueba{
-    position: absolute;
-    bottom: -551px;
-    
-  }
 </style>

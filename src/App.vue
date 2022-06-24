@@ -4,8 +4,12 @@
     <div id="main">
       <div class="nav"></div>
       <div class="contenido">
-          <Menu></Menu>
-          <Texto></Texto>
+          <div id="menuApp">
+            <Menu></Menu>
+          </div>
+          <div id="textoApp">
+            <Texto></Texto>
+          </div>
       </div>
     </div>
   </div>
@@ -14,15 +18,13 @@
 <script>
 import Menu from "./components/Menu.vue"
 import Texto from "./components/Texto.vue"
-import Test from "./components/Test.vue"
 
 export default {
   name: 'App',
 
   components: {
     Menu,
-    Texto,
-    Test
+    Texto
   },
 
   data(){
@@ -52,4 +54,14 @@ export default {
     display: flex;
   }
 
+  #menuApp{
+    height: 100%;
+    width: 20%;
+    background-color: #0077bf;
+  }
+
+  #textoApp{
+    height: 100%;
+    width: 80%;
+  }
 </style>
