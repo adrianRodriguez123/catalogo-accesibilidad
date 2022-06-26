@@ -22,7 +22,6 @@
           <p v-scroll-to="'#strings'" class="subelementos3" @click="menuClick('android')">Strings</p>
           <p v-scroll-to="'#imagenes'" class="subelementos3" @click="menuClick('android')">Imágenes</p>
           <p v-scroll-to="'#sonidos'" class="subelementos3" @click="menuClick('android')">Sonidos y movimiento</p>
-          <p v-scroll-to="'#apps'" class="subelementos3" @click="menuClick('android')">Apps</p>
         </div>
       </div>
     </div>
