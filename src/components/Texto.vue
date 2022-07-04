@@ -80,14 +80,14 @@
                     No se debe de utilizar strings “hard-coded”. Estos strings son los que se escriben tal cual en el código. Su uso no se recomienda, porque sino aplicaciones como Talkback, cuando leen la pantalla, leerán tal cual lo que hay escrito.
                 </p>            
                     <div class="divImagenes">
-                        <img src="../assets/hardcoded1.png">
+                        <img src="../assets/imagenes/hardcoded1.png">
                     </div>
                 <p>
 
                 </p>
 
                 <div class="divImagenes">
-                        <img src="../assets/hardcoded2.png">
+                        <img src="../assets/imagenes/hardcoded2.png">
                 </div>
             </div>
 
@@ -97,7 +97,7 @@
                     Los números tienen que estar en el formato apropiado para que Talkback los pueda leer correctamente. Esto lo podemos conseguir usando la clase NumberFormat.
                 </p>
                     <div class="divImagenes">
-                        <img src="../assets/internnumeros1.png">
+                        <img src="../assets/imagenes/internnumeros1.png">
                     </div>
                 
             </div>
@@ -109,7 +109,7 @@
                 </p>
 
                     <div class="divImagenes">
-                        <img src="../assets/internfechas1.png">
+                        <img src="../assets/imagenes/internfechas1.png">
                     </div>
             </div>
 
@@ -165,13 +165,13 @@
                     Este es un buen ejemplo del uso de texto descriptivo en una imagen.
                 </p>
                 <div class="divImagenes">
-                    <img src="../assets/imagenes1.png">
+                    <img src="../assets/imagenes/imagenes1.png">
                 </div>
                 <p>
                     Sin embargo, este es un mal uso, ya que como podemos observar esa imagen no es lo suficientemente  descriptiva para lo que se necesitaría, que en este caso sería algo más referido a la localización del lugar.
                 </p>
                 <div class="divImagenes">
-                    <img src="../assets/imagenes2.png">
+                    <img src="../assets/imagenes/imagenes2.png">
                 </div>
             </div>
 
@@ -197,7 +197,7 @@
                 </p>
                 <br>
                     <div class="divImagenes">
-                        <img src="../assets/perceptible1.png">
+                        <img src="../assets/imagenes/perceptible1.png">
                     </div>
                 <br>
                 <p>
@@ -208,7 +208,7 @@
                 </p>
                 <br>
                 <div class="divImagenes">
-                    <img src="../assets/perceptible2.png">
+                    <img src="../assets/imagenes/perceptible2.png">
                 </div>
                     <br>
             </div>
