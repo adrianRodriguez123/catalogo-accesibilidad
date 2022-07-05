@@ -17,9 +17,9 @@
 
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">¡Bienvenido al catálogo de accesibilidad!</div>
-                <div class="masthead-heading text-uppercase">¿Eres desarrollador?</div>
-                <router-link :to="{name: 'Principal'}"><a class="btn btn-primary btn-lg text-uppercase" href="#">Entra</a></router-link>
+                <div class="masthead-subheading">¿Eres desarrollador?</div>
+                <div class="masthead-heading text-uppercase">¡Bienvenido al catálogo de accesibilidad!</div>
+                <router-link :to="{name: 'Principal'}"><a class="btn btn-light btn-lg text-uppercase" href="#">Entra</a></router-link>
             </div>
         </header>
 
@@ -61,7 +61,7 @@
         <section class="page-section" id="web">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Web</h2>
+                    <h2 class="section-heading text-uppercase" style="color:black">Web</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <div class="row text-center">
@@ -128,15 +128,15 @@
 <script>
 
 import icons from '../assets/js/iconosFontAwesome.js'
-import bootstrapBundle from '../assets/js/bootstrapBundle.js'
-import scripts from '../assets/js/scriptsHome.js'
 
 export default {
     name: 'Home',
     components: {
-        
     }
 }
+//Sin esta linea no reconoce bootstrap
+window.bootstrap = require('../assets/js/bootstrapBundle.js')
+
 
 </script>
 
