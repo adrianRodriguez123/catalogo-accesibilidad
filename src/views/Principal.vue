@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div><!--https://startbootstrap.com/previews/sb-admin-->
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html">Catálogo</a>
@@ -8,8 +8,8 @@
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                    <input class="form-control" type="text" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button" @click="buscar"><i class="fas fa-search"></i></button>
                 </div>
             </form>
             <!-- Navbar-->
@@ -59,7 +59,13 @@
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Dashboard</h1>
-                        
+                        <p>
+                    Son la información y componentes de la interfaz de usuario que deben de ser presentados a los usuarios de manera que puedan percibirlos.
+                    Los contenidos audiovisuales deben de tener alternativas perceptibles para personas ciegas o sordas, como por ejemplo audio-descripción de vídeo, 
+                    subtítulos y lengua de señas para hacer accesible el contenido. Los contenidos que no contienen texto se llaman non-text, y se le pueden 
+                    indicar nombres que tienen que ser descriptivos para que sea perceptible por la mayoría de los usuarios. Por ejemplo con el atributo 'alt', 
+                    podemos indicar un nombre a una imagen para usuarios con problemas de visibilidad.
+                </p>
                         
                     </div>
                 </main>
@@ -105,6 +111,12 @@ export default {
   data(){
     return {
     };
+  },
+
+  methods: {
+    buscar() {
+      alert("hola")
+    }
   }
 };
 
