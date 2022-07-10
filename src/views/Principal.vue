@@ -8,8 +8,8 @@
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="btnNavbarSearch" v-model="search" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button" @click="buscar"><i class="fas fa-search"></i></button>
+                    <input v-model="search" class="form-control" type="text" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
                 </div>
             </form>
             <!-- Navbar-->
@@ -99,6 +99,7 @@ import icons from '../assets/js/iconosFontAwesome.js'
 import scripts from '../assets/js/scriptsPrincipal.js'
 import bootstrapBundle from '../assets/js/bootstrapBundle.js'
 
+
 export default {
   name: 'App',
 
@@ -108,24 +109,21 @@ export default {
     Nav
   },
 
-  data(){
-    return {
-    };
-  },
-
-  methods: {
-    buscar() {
-      alert("hola")
-    }
-  },
-
   computed: {
     search: {
       get (){
         return this.$store.state.filter.query;//Aquí recogemos el valor buscado
       },
       set (val){
-        this.$store.commit('SET_QUERY', val);//Pasamos el valor de la búsqueda
+        this.$store.commit('SET_QUERY', val);
+      }
+    },
+    plataforma: {
+      get (){
+        return this.$store.state.filter.plataforma;
+      },
+      set (){
+        this.$store.commit('SET_PLATAFORMA')
       }
     }
 
