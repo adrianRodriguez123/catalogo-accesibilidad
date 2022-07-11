@@ -59,14 +59,9 @@
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Dashboard</h1>
-                        <p>
-                    Son la información y componentes de la interfaz de usuario que deben de ser presentados a los usuarios de manera que puedan percibirlos.
-                    Los contenidos audiovisuales deben de tener alternativas perceptibles para personas ciegas o sordas, como por ejemplo audio-descripción de vídeo, 
-                    subtítulos y lengua de señas para hacer accesible el contenido. Los contenidos que no contienen texto se llaman non-text, y se le pueden 
-                    indicar nombres que tienen que ser descriptivos para que sea perceptible por la mayoría de los usuarios. Por ejemplo con el atributo 'alt', 
-                    podemos indicar un nombre a una imagen para usuarios con problemas de visibilidad.
-                </p>
-                        
+                        <div v-for="textoIndividual in filteredSearch" :key="textoIndividual.id">
+                          
+                        </div>
                     </div>
                 </main>
                 
@@ -98,36 +93,19 @@ import Nav from "../components/Nav.vue"
 import icons from '../assets/js/iconosFontAwesome.js'
 import scripts from '../assets/js/scriptsPrincipal.js'
 import bootstrapBundle from '../assets/js/bootstrapBundle.js'
-
+import MixinSearch from '../mixinsSearch.js'
 
 export default {
   name: 'App',
-
+  mixins: [MixinSearch],
   components: {
     Menu,
     Texto,
     Nav
   },
 
-  computed: {
-    search: {
-      get (){
-        return this.$store.state.filter.query;//Aquí recogemos el valor buscado
-      },
-      set (val){
-        this.$store.commit('SET_QUERY', val);
-      }
-    },
-    plataforma: {
-      get (){
-        return this.$store.state.filter.plataforma;
-      },
-      set (){
-        this.$store.commit('SET_PLATAFORMA')
-      }
-    }
+  
 
-  }
 };
 
 </script>
