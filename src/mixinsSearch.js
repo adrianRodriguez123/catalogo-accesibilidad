@@ -11,13 +11,13 @@ export default {
               id: 1,
               titulo: "Principios",
               palabras_clave: "hola",
-              texto:"Claridad: El diseño de las interfaces debe de ser claro y además con diferentes maneras para realizar cada acción"
+              textoMostrado:"Claridad: El diseño de las interfaces debe de ser claro y además con diferentes maneras para realizar cada acción"
             },
             {
               id: 2,
               titulo: "Requisitos y recomendaciones",
               palabras_clave: "hola",
-              texto:"Para que la app tenga un mínimo nivel de accesibilidad debe cumplir las siguientes pautas:"
+              textoMostrado:"Para que la app tenga un mínimo nivel de accesibilidad debe cumplir las siguientes pautas:"
             },
             {
               id: 3,
@@ -30,9 +30,9 @@ export default {
       },
     computed: {
         filteredSearch() {
-            return this.textos.filter((text) => {
-              text.textoMostrado.toLowerCase().includes(this.search.toLowerCase());
-              }
+            return this.textos.filter((text) => 
+              text.textoMostrado.toLowerCase().includes(this.search.toLowerCase())
+              
             );
           },
     }

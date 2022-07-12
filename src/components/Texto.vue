@@ -1,7 +1,8 @@
 <template>
     <div id="mainTexto">
-        
-        <div id="textoAndroidPrincipal">
+        <h3>{{ textoComponente.titulo }}</h3>
+        <p>{{textoComponente.textoMostrado}}</p>
+        <!--<div id="textoAndroidPrincipal">
             <div class="texto">
                 <h1 id="principio">Principios</h1>
                 <p>
@@ -326,7 +327,7 @@
                         <li>3.3.6 Prevención de errores (todos) Reduzca el riesgo de todos los errores de entrada</li>
                     </ul>
             </div>
-        </div>
+        </div>-->
 
         <!--<div id="textoTestPrincipal">
             <h1 id="urlTest">URL TEST: XXXXXXXXXXXXXXXXXX</h1>
@@ -411,6 +412,7 @@
 import axios from "axios";
 
 export default{
+    props: ["textoComponente"]
 }
 </script>
 

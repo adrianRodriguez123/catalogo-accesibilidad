@@ -60,7 +60,7 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Dashboard</h1>
                         <div v-for="textoIndividual in filteredSearch" :key="textoIndividual.id">
-                          
+                            <texto :textoComponente="textoIndividual"></texto>
                         </div>
                     </div>
                 </main>
