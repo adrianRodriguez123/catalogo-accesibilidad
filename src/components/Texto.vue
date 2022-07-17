@@ -419,7 +419,6 @@ export default{
 <style>
 
     #mainTexto{
-        margin-left: 5%;
         margin-top: 20px;
     }
 
