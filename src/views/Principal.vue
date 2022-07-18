@@ -63,7 +63,16 @@
                             <div v-for="textoIndividual in filteredSearch" :key="textoIndividual.id">
                               <texto :textoComponente="textoIndividual"></texto>
                             </div>
+
+                            <b-pagination
+                              v-model="currentPage"
+                              :per-page="perPage"
+                              :total-rows="3"
+                              aria-controls="mainTexto">
+                            </b-pagination>
+                          
                           </b-tab>
+
                           <b-tab title="Web">
                             
                           </b-tab>
@@ -109,6 +118,14 @@ export default {
     Texto,
     Nav
   },
+
+  data() {
+    return {
+      perPage: 3,
+      currentPage: 1,
+
+    }
+  }
 };
 
 </script>

@@ -1,7 +1,9 @@
 <template>
-    <div id="mainTexto">
-        <h3>{{ textoComponente.titulo }}</h3>
-        <p>{{textoComponente.textoMostrado}}</p>
+    <div id="mainTexto" :items="textoComponente"
+      :per-page="perPage"
+      :current-page="currentPage">
+        <!--<h3>{{ textoComponente.titulo }}</h3>-->
+        <p v-html="textoComponente.textoMostrado">{{textoComponente.textoMostrado}}</p>
         <!--<div id="textoAndroidPrincipal">
             <div class="texto">
                 <h1 id="principio">Principios</h1>
@@ -412,7 +414,7 @@
 import axios from "axios";
 
 export default{
-    props: ["textoComponente"]
+    props: ["textoComponente", "items", "per-page", "current-page"]
 }
 </script>
 
