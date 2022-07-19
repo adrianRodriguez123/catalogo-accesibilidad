@@ -1,7 +1,5 @@
 <template>
-    <div id="mainTexto" :items="textoComponente"
-      :per-page="perPage"
-      :current-page="currentPage">
+    <div id="mainTexto" :items="textoComponente" :per-page="perPage" :current-page="currentPage">
         <!--<h3>{{ textoComponente.titulo }}</h3>-->
         <p v-html="textoComponente.textoMostrado">{{textoComponente.textoMostrado}}</p>
         <!--<div id="textoAndroidPrincipal">
@@ -414,7 +412,7 @@
 import axios from "axios";
 
 export default{
-    props: ["textoComponente", "items", "per-page", "current-page"]
+    props: ["textoComponente", "per-page", "current-page"]
 }
 </script>
 

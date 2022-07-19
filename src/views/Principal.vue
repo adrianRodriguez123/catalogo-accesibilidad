@@ -56,29 +56,29 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4"></h1>
-                        <b-tabs content-class="mt-3">
-                          <b-tab title="Android" active>
-                            <div v-for="textoIndividual in filteredSearch" :key="textoIndividual.id">
-                              <texto :textoComponente="textoIndividual"></texto>
-                            </div>
-
-                            <b-pagination
-                              v-model="currentPage"
-                              :per-page="perPage"
-                              :total-rows="3"
-                              aria-controls="mainTexto">
-                            </b-pagination>
-                          
-                          </b-tab>
-
-                          <b-tab title="Web">
-                            
-                          </b-tab>
-                        </b-tabs>
-                        
+              <div class="container-fluid px-4">
+                <h1 class="mt-4"></h1>
+                <b-tabs content-class="mt-3">
+                  <b-tab title="Android" active>
+                    <div v-for="textoIndividual in filteredSearch" :key="textoIndividual.id">
+                      <texto :per-page="perPage" :current-page="currentPage" :textoComponente="textoIndividual"></texto>
                     </div>
+
+                    <b-pagination
+                      v-model="currentPage"
+                      :per-page="3"
+                      :total-rows="3"
+                      aria-controls="mainTexto">
+                    </b-pagination>
+                  
+                  </b-tab>
+
+                  <b-tab title="Web">
+                    
+                  </b-tab>
+                </b-tabs>
+                  
+              </div>
                 
             </div>
         </div>
