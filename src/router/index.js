@@ -17,6 +17,10 @@ export default new Router({
       path: '/principal',
       name: 'Principal',
       component: Principal
+    },
+    {
+      path: '/principal/:prin',
+      component: Principal
     }
   ]
 })

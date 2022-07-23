@@ -6,12 +6,6 @@
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#android">Android</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#web">Web</a></li>
-                    </ul>
-                </div>
             </div>
         </nav>
 
@@ -19,7 +13,7 @@
             <div class="container">
                 <div class="masthead-subheading">¿Eres desarrollador?</div>
                 <div class="masthead-heading text-uppercase">¡Bienvenido al catálogo de accesibilidad!</div>
-                <router-link :to="{name: 'Principal'}"><a class="btn btn-light btn-lg text-uppercase" href="#">Entra</a></router-link>
+                <router-link :to="'/principal/perceptible'"><a class="btn btn-light btn-lg text-uppercase" href="#">Entra</a></router-link>
             </div>
         </header>
 

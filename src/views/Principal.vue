@@ -2,7 +2,7 @@
   <div><!--https://startbootstrap.com/previews/sb-admin-->
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Catálogo</a>
+            <a class="navbar-brand ps-3" href="/">Catálogo</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -21,33 +21,38 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Elementos</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePrincipios" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Perceptible
+                                Principios
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                            <!--TODO https://getbootstrap.com/docs/4.0/components/navs/#regarding-accessibility-->
+                            <div class="collapse" id="collapsePrincipios" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <router-link class="link" :to="'/principal/perceptible'"><a class="nav-link" @click="active = !active" href="#">Perceptible</a></router-link>
+                                    <router-link :to="'/principal/operable'"><a class="nav-link" href="#">Operable</a></router-link>
+                                    <router-link :to="'/principal/entendible'"><a class="nav-link" href="#">Entendible</a></router-link>
+                                    <router-link :to="'/principal/robusto'"><a class="nav-link" href="#">Robusto</a></router-link>
+                                </nav>
+                            </div>
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Operable
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Entendido
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Robusto
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseConformidad" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Conformidad
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
+                            <div class="collapse" id="collapseConformidad" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Nivel A</a>
+                                    <a class="nav-link" href="#">Nivel AA</a>
+                                    <a class="nav-link" href="#">Nivel AAA</a>
+                                </nav>
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Herramientas
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                         </div>
@@ -59,18 +64,12 @@
               <div class="container-fluid px-4">
                 <h1 class="mt-4"></h1>
                 <b-tabs content-class="mt-3">
+                  <!--https://es.vuejs.org/v2/style-guide/#Evitar-v-if-con-v-for-esencial-->
                   <b-tab title="Android" active>
-                    <div v-for="textoIndividual in filteredSearch" :key="textoIndividual.id">
-                      <texto :per-page="perPage" :current-page="currentPage" :textoComponente="textoIndividual"></texto>
+                    <div v-for="textoIndividual in principioElegido($route.params.prin)" :key="textoIndividual.id">
+                      <texto :textoComponente="textoIndividual"></texto>
                     </div>
 
-                    <b-pagination
-                      v-model="currentPage"
-                      :per-page="3"
-                      :total-rows="3"
-                      aria-controls="mainTexto">
-                    </b-pagination>
-                  
                   </b-tab>
 
                   <b-tab title="Web">
@@ -118,14 +117,29 @@ export default {
     Texto,
     Nav
   },
-
   data() {
     return {
-      perPage: 3,
-      currentPage: 1,
-
+      active: true
     }
-  }
+  },
+  methods: {
+    principioElegido(e) {//El método recibe el valor de la ruta
+      return this.filteredSearch.filter(function (textoIndividual){
+        if(textoIndividual.titulo == e){
+          return textoIndividual
+        }
+      })
+    }
+  },//Con el watch podemos controlar lo que ocurre al cambiar de ruta
+  created() {
+    this.$watch(
+      () => this.$route.params,
+      (toParams, previousParams) => {
+        this.principioElegido(toParams.prin)
+      }
+    );
+  },
+
 };
 
 </script>
@@ -136,6 +150,10 @@ export default {
 @import '../assets/css/principal.css';
 @import '../assets/css/fuenteMontserrat.css';
 @import '../assets/css/fuenteRoboto.css';
+
+.link.active{
+  background-color: brown;
+}
 /*
   #main{
     display: flex;
