@@ -1,19 +1,12 @@
-# catalogo
+# Catálogo de accesibilidad
+## ¿Quién soy?
+Hola! Soy Adrián Rodríguez, un estudiante de Ingeniería Informática de la Universitat Politécnica de Valencia.
 
-## Project setup
-```
-npm install
-```
+## ¿Qué es esto?
+Pues bien, seguramente te lo estés preguntando. No es ni más ni menos que un catálogo de accesibilidad para ayudar a los desarroladores a crear aplicaciones Android y webs accesibles.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## ¿Por qué?
+Seguramente también te lo estés preguntando. La respuesta es simple. Todas las webs y guías que existen son densas y largas. Este catálogo se centra en hacerlo todo más sencillo de leer y de aplicar.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## ¿Cómo?
+Estsa aplicación web se ha realizado principalemte con Vue 2.x
