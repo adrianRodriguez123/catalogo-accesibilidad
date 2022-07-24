@@ -9,4 +9,4 @@ Pues bien, seguramente te lo estés preguntando. No es ni más ni menos que un c
 Seguramente también te lo estés preguntando. La respuesta es simple. Todas las webs y guías que existen son densas y largas. Este catálogo se centra en hacerlo todo más sencillo de leer y de aplicar.
 
 ## ¿Cómo?
-Estsa aplicación web se ha realizado principalemte con Vue 2.x
+Estsa aplicación web se ha realizado principalmente con Vue 2.x
