@@ -29,10 +29,10 @@
                             <!--TODO https://getbootstrap.com/docs/4.0/components/navs/#regarding-accessibility-->
                             <div class="collapse" id="collapsePrincipios" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <router-link class="link" :to="'/principal/perceptible'"><a class="nav-link" @click="active = !active" href="#">Perceptible</a></router-link>
-                                    <router-link :to="'/principal/operable'"><a class="nav-link" href="#">Operable</a></router-link>
-                                    <router-link :to="'/principal/entendible'"><a class="nav-link" href="#">Entendible</a></router-link>
-                                    <router-link :to="'/principal/robusto'"><a class="nav-link" href="#">Robusto</a></router-link>
+                                    <router-link class="link" :to="'/principal/perceptible'"><a class="nav-link" @click="toggleActive(0)" :class="{marcado: activeIndex==0}" href="#">Perceptible</a></router-link>
+                                    <router-link :to="'/principal/operable'"><a class="nav-link" @click="toggleActive(1)" :class="{marcado: activeIndex==1}" href="#">Operable</a></router-link>
+                                    <router-link :to="'/principal/entendible'"><a class="nav-link" @click="toggleActive(2)" :class="{marcado: activeIndex==2}" href="#">Entendible</a></router-link>
+                                    <router-link :to="'/principal/robusto'"><a class="nav-link" @click="toggleActive(3)" :class="{marcado: activeIndex==3}" href="#">Robusto</a></router-link>
                                 </nav>
                             </div>
 
@@ -117,9 +117,10 @@ export default {
     Texto,
     Nav
   },
-  data() {
+  data(){
     return {
-      active: true
+      activeIndex: null,
+      isMarcado: false
     }
   },
   methods: {
@@ -129,6 +130,10 @@ export default {
           return textoIndividual
         }
       })
+    },
+
+    toggleActive(index){
+      this.activeIndex = index;
     }
   },//Con el watch podemos controlar lo que ocurre al cambiar de ruta
   created() {
@@ -151,8 +156,8 @@ export default {
 @import '../assets/css/fuenteMontserrat.css';
 @import '../assets/css/fuenteRoboto.css';
 
-.link.active{
-  background-color: brown;
+.marcado{
+  background-color: rgb(72, 77, 87);
 }
 /*
   #main{
