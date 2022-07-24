@@ -9,7 +9,6 @@
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
                     <input v-model="search" class="form-control" type="text" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
                 </div>
             </form>
             <!-- Navbar-->
@@ -29,7 +28,7 @@
                             <!--TODO https://getbootstrap.com/docs/4.0/components/navs/#regarding-accessibility-->
                             <div class="collapse" id="collapsePrincipios" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <router-link class="link" :to="'/principal/perceptible'"><a class="nav-link" @click="toggleActive(0)" :class="{marcado: activeIndex==0}" href="#">Perceptible</a></router-link>
+                                    <router-link :to="'/principal/perceptible'"><a class="nav-link" @click="toggleActive(0)" :class="{marcado: activeIndex==0}" href="#">Perceptible</a></router-link>
                                     <router-link :to="'/principal/operable'"><a class="nav-link" @click="toggleActive(1)" :class="{marcado: activeIndex==1}" href="#">Operable</a></router-link>
                                     <router-link :to="'/principal/entendible'"><a class="nav-link" @click="toggleActive(2)" :class="{marcado: activeIndex==2}" href="#">Entendible</a></router-link>
                                     <router-link :to="'/principal/robusto'"><a class="nav-link" @click="toggleActive(3)" :class="{marcado: activeIndex==3}" href="#">Robusto</a></router-link>
@@ -64,16 +63,33 @@
               <div class="container-fluid px-4">
                 <h1 class="mt-4"></h1>
                 <b-tabs content-class="mt-3">
-                  <!--https://es.vuejs.org/v2/style-guide/#Evitar-v-if-con-v-for-esencial-->
+                  <!-- TODO https://es.vuejs.org/v2/style-guide/#Evitar-v-if-con-v-for-esencial-->
                   <b-tab title="Android" active>
+                    
                     <div v-for="textoIndividual in principioElegido($route.params.prin)" :key="textoIndividual.id">
-                      <texto :textoComponente="textoIndividual"></texto>
+                      
+                      <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              {{textoIndividual.subtitulo}}
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <texto :textoComponente="textoIndividual"></texto>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                   </b-tab>
 
                   <b-tab title="Web">
+
                     
+
                   </b-tab>
                 </b-tabs>
                   
