@@ -64,18 +64,18 @@
                 <h1 class="mt-4"></h1>
                 <b-tabs content-class="mt-3">
                   <!-- TODO https://es.vuejs.org/v2/style-guide/#Evitar-v-if-con-v-for-esencial-->
+                  <!--https://getbootstrap.com/docs/5.0/components/accordion/-->
                   <b-tab title="Android" active>
-                    
-                    <div v-for="textoIndividual in principioElegido($route.params.prin)" :key="textoIndividual.id">
-                      
-                      <div class="accordion" id="accordionExample">
+                    <div class="accordion" id="accordionExample">
+
+                      <div v-for="textoIndividual in principioElegido($route.params.prin)" :key="textoIndividual.id">
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <h2 class="accordion-header" :id="['titulo' + textoIndividual.id]">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="['#contenido' + textoIndividual.id]" aria-expanded="false" :aria-controls="['#contenido' + textoIndividual.id]">
                               {{textoIndividual.subtitulo}}
                             </button>
                           </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div :id="['contenido' + textoIndividual.id]" class="accordion-collapse collapse" :aria-labelledby="['titulo' + textoIndividual.id]" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <texto :textoComponente="textoIndividual"></texto>
                             </div>
@@ -87,8 +87,6 @@
                   </b-tab>
 
                   <b-tab title="Web">
-
-                    
 
                   </b-tab>
                 </b-tabs>
@@ -148,6 +146,7 @@ export default {
       })
     },
 
+    //Método para activar o desactivar el fondo que se muestra al hacer click en un elemento del menú
     toggleActive(index){
       this.activeIndex = index;
     }
