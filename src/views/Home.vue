@@ -11,7 +11,7 @@
 
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">¿Eres desarrollador?</div>
+                <div class="masthead-subheading">¿Eres desarrollador? siiiiii</div>
                 <div class="masthead-heading text-uppercase">¡Bienvenido al catálogo de accesibilidad!</div>
                 <router-link :to="'/principal/perceptible'"><a class="btn btn-light btn-lg text-uppercase" href="#">Entra</a></router-link>
             </div>
