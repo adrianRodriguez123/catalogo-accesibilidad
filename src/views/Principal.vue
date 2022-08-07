@@ -68,7 +68,7 @@
                   <b-tab title="Android" active>
                     <div class="accordion" id="accordionExample">
 
-                      <div v-for="textoIndividual in principioElegido($route.params.prin)" :key="textoIndividual.id">
+                      <div v-for="textoIndividual in principioElegido($route.params.prin, android)" :key="textoIndividual.id">
                         <div class="accordion-item">
                           <h2 class="accordion-header" :id="['titulo' + textoIndividual.id]">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="['#contenido' + textoIndividual.id]" aria-expanded="false" :aria-controls="['#contenido' + textoIndividual.id]">
@@ -82,12 +82,29 @@
                           </div>
                         </div>
                       </div>
-                    </div>
 
+                    </div>
                   </b-tab>
 
                   <b-tab title="Web">
+                    <div class="accordion" id="accordionExample">
 
+                      <div v-for="textoIndividual in principioElegido($route.params.prin, web)" :key="textoIndividual.id">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" :id="['titulo' + textoIndividual.id]">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="['#contenido' + textoIndividual.id]" aria-expanded="false" :aria-controls="['#contenido' + textoIndividual.id]">
+                              {{textoIndividual.subtitulo}}
+                            </button>
+                          </h2>
+                          <div :id="['contenido' + textoIndividual.id]" class="accordion-collapse collapse" :aria-labelledby="['titulo' + textoIndividual.id]" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <texto :textoComponente="textoIndividual"></texto>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
                   </b-tab>
                 </b-tabs>
                   
@@ -134,13 +151,15 @@ export default {
   data(){
     return {
       activeIndex: null,
-      isMarcado: false
+      isMarcado: false,
+      android: "android",
+      web: "web"
     }
   },
   methods: {
-    principioElegido(e) {//El método recibe el valor de la ruta
+    principioElegido(e, tech) {//El método recibe el valor de la ruta
       return this.filteredSearch.filter(function (textoIndividual){
-        if(textoIndividual.titulo == e){
+        if(textoIndividual.titulo === e && textoIndividual.tech === tech){
           return textoIndividual
         }
       })
