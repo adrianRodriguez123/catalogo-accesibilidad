@@ -113,40 +113,25 @@
             </div>
         </div>
   </div>
-<!--
-  <div id="app">
-    <div id="main">
-      <div class="nav">
-        <Nav></Nav>
-      </div>
-      <div class="contenido">
-          <div id="menuApp">
-            <Menu></Menu>
-          </div>
-          <div id="textoApp">
-            <Texto></Texto>
-          </div>
-      </div>
-    </div>
-  </div>-->
 </template>
 
 <script>
-import Menu from "../components/Menu.vue"
+//import Menu from "../components/Menu.vue"
 import Texto from "../components/Texto.vue"
-import Nav from "../components/Nav.vue"
+//import Nav from "../components/Nav.vue"
 import icons from '../assets/js/iconosFontAwesome.js'
 import scripts from '../assets/js/scriptsPrincipal.js'
 import bootstrapBundle from '../assets/js/bootstrapBundle.js'
-import MixinSearch from '../mixinsSearch.js'
+import Search_Data from '../search_data.js'
 
 export default {
   name: 'App',
-  mixins: [MixinSearch],
+  mixins: [Search_Data],
   components: {
-    Menu,
-    Texto,
-    Nav
+    //Menu,
+    //Nav,
+    Texto
+    
   },
   data(){
     return {
@@ -154,7 +139,15 @@ export default {
       isMarcado: false,
       android: "android",
       web: "web"
+            
     }
+  },
+  computed: {
+      filteredSearch() {
+        return this.textos.filter((text) =>
+          text.textoMostrado.toLowerCase().includes(this.search.toLowerCase())
+        );
+      }
   },
   methods: {
     principioElegido(e, tech) {//El método recibe el valor de la ruta
@@ -193,34 +186,4 @@ export default {
 .marcado{
   background-color: rgb(72, 77, 87);
 }
-/*
-  #main{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    }
-
-  .nav{
-    height: 200px;
-    width: 100%;
-    background-color: #0077bf;
-  }
-
-  .contenido{
-    height: 2500px;
-    width: 100%;
-    display: flex;
-  }
-
-  #menuApp{
-    height: 100%;
-    width: 20%;
-    background-color: #0077bf;
-  }
-
-  #textoApp{
-    height: 100%;
-    width: 80%;
-  }
-  */
 </style>
