@@ -93,14 +93,32 @@ export default {
                 titulo: "perceptible",
                 subtitulo: "Contenido no textual",
                 tech: "web",
-                textoMostrado: "<p>Ofrecer textos alternativos para contenido no textual. Esto se puede realizar con textos de gran tamaño, braile, audio, símbolos o lenguaje más simple.</p>"
+                textoMostrado: "<p>Ofrecer textos alternativos para contenido no textual. Esto se puede conseguir con textos de gran tamaño, braile, audio, símbolos o lenguaje más simple. Para"+
+                " poder conseguirlo en nuestra web, existen 2 maneras:"+
+                    "<ul><li>Atributo 'alt': Es un atributo HTML para un texto que describe una imagen. También se puede aplicar a etiquetas area, input y applet. "+
+                        "Además también ayuda a que los motores de búsqueda indexen mejor nuestra web."+
+                        "En el atributo 'alt' se debe escribir un texto que cumpla la misma función que la imagen y que la describa.<br><br></li>"+
+                        "<img src='./imagenes/perceptibleWeb.png' alt='Imagen con atributo alt' />"+
+                        "<br><br>"+
+                        "<li>Atributo ‘aria-label’: Parecido al atributo ‘alt’. Se utiliza para definir una cadena que etiqueta al elemento actual. Se puede utilizar con cualquier elemento HTML."+
+                        "<img src='./imagenes/arialabel.jpg' alt='Imagen con atributo aria-label' />"+
+                        "<br><br>"+
+                    "</ul>"+
+                "</p>"
             },
             {
                 id: 5,
                 titulo: "perceptible",
-                subtitulo: "Cotenido multimedia",
+                subtitulo: "Cotenido multimedia basado en el tiempo",
                 tech: "web",
-                textoMostrado: "<p>Todo el contenido de audio y de vídeo tiene que tener alternativas para asegurarse de que todos los usuarios puedan disfrutarlo." +
+                textoMostrado: "<p>Todo el contenido de audio y de vídeo tiene que tener alternativas para asegurarse de que todos los usuarios puedan disfrutarlo, como por ejemplo subtítulos."+
+                "<ul>"+
+                    "<li>Con la interfaz HTMLMediaElement nos podemos ayudar para soportar contenido multimedia.</li>" +
+                    "<li>Si el contenido es solo vídeo, para las personas con discapacidades visuales se podría aportar un audio (hablado) describiendo la información del vídeo.</li>"+
+                    "<li>Si el contenido es un video en directo, por ejemplo en la televisión, se deben de crear subtítulos online.</li>"+
+                    "<li>Si se necesita, en un pequeño recuadro del vídeo se deberá mostrar una intérprete de lenguaje de señas para las personas con problemas de audición.</li>"+
+                    "<li>Se puede proporcionar un segundo vídeo con las descripciones en audio, ya que puede ocurrir que las descripciones de audio pueden ser más largas que lo que dura la escena.</li>"+
+                "</ul>" +
                     "</p>"
             },
             {
@@ -108,7 +126,22 @@ export default {
                 titulo: "perceptible",
                 subtitulo: "Adaptable",
                 tech: "web",
-                textoMostrado: "<p>Que el contenido pueda ser presentado de diferentes formas sin que se pierda información o estructura." +
+                textoMostrado: "<p>Que el contenido pueda ser presentado de diferentes formas sin que se pierda información o estructura. Para ello, la información y la estructura de la web puede determinarse de forma programada, de la siguientes maneras:" +
+                    "<li>Con el atributo 'role' podemos añadir una explicación sobre la página para que aquel que use tecnologías de apoyo, puedan ser leídas y bien entendidas.</li>"+
+                    "<img src='./imagenes/roleatributo.JPG'/>"+
+                    "<br><br>"+
+                    "<li>Además de lo previamente comentado, podemos usar el atributo 'role' para un grupo de elementos mediante el valor 'group' o con el valor 'region'. El primero no estaría previsto que fuera leído por tecnologías de apoyo pero el segundo sí.</li>"+
+                    "<img src='./imagenes/roleatributogroup.PNG'/>"+
+                    "<img src='./imagenes/roleatributoregion.PNG'/>"+
+                    "<br><br>"+
+                    "<li>También se puede conseguir con el atributo 'aria-labelledby'</li>"+
+                    "<img src='./imagenes/arialabeledby.JPG'/>"+
+                    "<br><br>"+
+                    "<p>Para no perder información, es necesario que el orden de los componentes estén correctamente posicionados, para que así las tecnologías asistivas puedan orientar correctamente al usuario.</p>"+
+                    "<p>Tampoco se tiene que bloquear la orientación del contenido(vertical u horizontal), a menos que sea ensencial.</p>"+
+                    "El propósito de cada campo de entrada se puede definir mediante programación cuando avisamos anteriormente de como estamos procesando los datos o el contenido se utiliza para identificar el significado esperado."+
+                    "Podemos usar el atributo 'role' para que se pueda identificar el propósito de cada campo."+
+                    "<img src='./imagenes/roleatributo.JPG'/>"+
                     "</p>"
             },
             {
@@ -117,7 +150,9 @@ export default {
                 subtitulo: "Distinguible",
                 tech: "web",
                 textoMostrado: "<p>Que sea distinguible consiste en realizar de una forma más sencilla que los usuarios puedan escuchar y ver el contenido." +
-                    "</p>"
+                "Se pueden usar colores para diferenciar la información. Asimismo, se debe explicar en una leyenda el significado de cada color. Para las personas con problemas de visión, se puede combinar el color con el texto, para así ser leído por una tecnología asistiva"+
+                "<p>Es importante permitir reproducir un audio al entrar en la página, pero más importante es que dure 3 segundos o menos y que pare automáticamente, para no entorpecer al lector de pantalla o tecnología de apoyo.</p>"+
+                "</p>"
             },
             //WEB OPERABLE
             {
