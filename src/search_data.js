@@ -150,8 +150,14 @@ export default {
                 subtitulo: "Distinguible",
                 tech: "web",
                 textoMostrado: "<p>Que sea distinguible consiste en realizar de una forma más sencilla que los usuarios puedan escuchar y ver el contenido." +
-                "Se pueden usar colores para diferenciar la información. Asimismo, se debe explicar en una leyenda el significado de cada color. Para las personas con problemas de visión, se puede combinar el color con el texto, para así ser leído por una tecnología asistiva"+
-                "<p>Es importante permitir reproducir un audio al entrar en la página, pero más importante es que dure 3 segundos o menos y que pare automáticamente, para no entorpecer al lector de pantalla o tecnología de apoyo.</p>"+
+                "<p>Se pueden usar colores para diferenciar la información. Asimismo, se debe explicar en una leyenda el significado de cada color. Para las personas con problemas de visión, se puede combinar el color con el texto, para así ser leído por una tecnología asistiva. No hay que olvidarse de que se debe dejar elegir al usuario el color del fondo.</p>"+
+                "<p>Es importante permitir reproducir un audio al entrar en la página, pero más importante es que ese audio dure 3 segundos o menos y que pare automáticamente, para no entorpecer al lector de pantalla o tecnología de apoyo. También se puede parar mediante algún mecanismo por el usuario.</p>"+
+                "<p>Es necesarios asegurarse de que se pueda hacer más grande el texto, mediante alguna función (incorporada en el navegador) de zoom por ejemplo, pero también todos los elementos sean reajustados. También se puede incorporar alguna función en la web para reajustar el texto, modificar la fuente, la alineación, el tamaño,etc.</p>"+
+                "<p>En el caso de que exista audio y sonido de fondo, el audio debe ser 20 db mayor que el sonido de fondo, para las personas con problemas de audición.</p>"+
+                "<p>Para no perder información acerca de los tooltips, podemos usar el atributo 'role':</p>"+
+                "<ul><li>NOTA: El atributo 'aria-describedby' sirve para enlazar otro elemento de la página."+
+                "<img src='./imagenes/roleatributotooltip.PNG'/></li>"+
+                "</ul>"+
                 "</p>"
             },
             //WEB OPERABLE
@@ -160,7 +166,10 @@ export default {
                 titulo: "operable",
                 subtitulo: "Accesible desde el teclado",
                 tech: "web",
-                textoMostrado: "<p>Que toda la funcionalidad sea accesible desde el teclado." +
+                textoMostrado: "<p>Que toda la funcionalidad sea accesible desde el teclado. Con la tecla Tab o Tabuladora podemos movernos por la página y comprobar si se puede usar solamente el teclado. También lo podemos intentar para aquellas páginas donde se realice la función de arrastrar y soltar con las teclas del teclado en forma de flechas, o además podría añadirse una funcionalidad para cortar la foto y pegarla." +
+                "Los elementos más comunes de HTML permiten que se utilicen con el teclado. Estos elementos pueden ser &lt;a&gt;, &lt;button&gt;, &lt;fieldset&gt;, &lt;input&gt;, &lt;textarea&gt; y &lt;select&gt;."+
+                "También tiene que ser posible que se quite el foco del teclado con el teclado, para que el usuario que no pueda usar el ratón no se quede atrapado en el contenido."+
+                "Igualmente pueden existir atajos de teclado de un solo carácter, pero éstos tienen que tener la opción de poder ser modificados, quitados y activos solo cuando esté el foco en elemento correspondiente."+
                     "</p>"
             },
             {
@@ -168,7 +177,10 @@ export default {
                 titulo: "operable",
                 subtitulo: "Suficiente tiempo",
                 tech: "web",
-                textoMostrado: "<p>Ofrecer a los usuarios el tiempo suficiente para usar el contenido." +
+                textoMostrado: "<p>Ofrecer a los usuarios el tiempo suficiente para leer y utilizar el contenido."+
+                    "<p>Para cada acción que requiera tiempo límite, el usuario debe disponer alguna función que le permita parar el tiempo o ajustarlo a su medida.</p>"+
+                    "<p>Para cualquier movimiento, parpadeo o scroll debe de existir alguna funcionalidad que permita parar la acción, a menos que sea esencial.</p>"+
+                    "<p>Para las aplicaciones web que requieran un inicio de sesión, cuando la sesión expire, se tendrá que haber guardado los datos, para que al autenticarse de nuevo sigán estando. Se debería además, avisar de cuanto tiempo lleva el usuario inactivo porque podrían causar pérdidas de datos.</p>"+
                     "</p>"
             },
             {
@@ -177,6 +189,7 @@ export default {
                 subtitulo: "Convulsiones y reacciones físicas",
                 tech: "web",
                 textoMostrado: "<p>No crear contenido que pueda causar convulsiones o reacciones físicas." +
+                    "<p>Para las personas con problemas de epilepsia es necesario controlar cosas como que no hayan más de 3 parpadeos por segundo en nuestra web. También se puede proporcionar alguna función para deshabilitar la animación del movimiento provocada por la interacción, a menos que sea esencial para la funcionalidad o para la información trasmitida.</p>"+
                     "</p>"
             },
             {
@@ -185,6 +198,33 @@ export default {
                 subtitulo: "Navegable",
                 tech: "web",
                 textoMostrado: "<p>Ofrecer a los usuarios diferentes formas para navegar por el sitio web, encontrar contenido y determinar donde están." +
+                    "<p>Un mecanismo que se debe proporcionar es el de poder saltarse grandes bloques de contenido que estén repetidos. Podría ser diferentes links para saltarse cada bloque o agrupar los bloques y añadir 1 solo link.</p>"+
+                    "<p>También es importante que el título de la página sea el correcto para que pueda ser bien interpretado. De esta manera se escribe el título de una página:</p>"+
+                    "<img src='./imagenes/tituloweb.PNG' />"+
+                    "<p>Si la navegación de una web es secuencial, se deberán mantener el orden de los elementos que reciban el foco, y ese foco debe de estar resaltado en la web.</p>"+
+                    "<p>Los enlaces que el usuario puede usar en toda la web tienen un propósito, y ese propósito lo podemos indicar programáticamente: </p>"+
+                    "<ul>"+
+                        "<li>"+
+                            "<p>Lo podemos hacer mediante el atributo 'href'</p>"+
+                            "<img src='./imagenes/linkProposito1.PNG'/>"+
+                        "</li><br>"+
+                        "<li>"+
+                            "<p>También lo podemos hacer mediante el atributo 'alt'</p>"+
+                            "<img src='./imagenes/linkProposito2.PNG'/>"+
+                        "</li><br>"+
+                        "<li>"+
+                            "<p>También lo podemos hacer mediante el atributo 'aria-labelledby'</p>"+
+                            "<img src='./imagenes/linkProposito3.PNG'/>"+
+                        "</li><br>"+
+                        "<li>"+
+                            "<p>También lo podemos hacer mediante el atributo 'aria-label'</p>"+
+                            "<img src='./imagenes/linkProposito4.PNG'/>"+
+                        "</li><br>"+
+                    "</ul>"+
+                    "<p>Es necesario proporcionar cabeceras, etiquetas y títulos descriptivos.</p>"+
+                    "<p>Es importante añadir en la web el recurso llamado 'migas de pan0 para que el usuario sepa en todo momento donde está y como ha llegado hasta ahí.</p>"+
+                    "<p>Por último, es bastante útil utilizar cabeceras o títulos para ordenar la página: <br></p>"+
+                    "<img src='./imagenes/headings.PNG'/>"+
                     "</p>"
             },
             {
@@ -193,6 +233,8 @@ export default {
                 subtitulo: "Modalidades de entrada",
                 tech: "web",
                 textoMostrado: "<p>Que los usuarios puedan manejarse por el sitio web a través de dispositivos de entrada diferentes del teclado." +
+                "<p>Uno de los objetivos es asegurarse de que el contenido puede ser utilizado por un solo puntero en vez de muchos. Se debe de poder abortar o deshacer la acción en cualquier momento.</p>"+
+                "<p>El tamaño del puntero objetivo del puntero tiene que ser de al menos 44 por 44 CSS pixels, o lo que es lo mismo 9mm cuadrados.</p>"+
                     "</p>"
             },
             //WEB ENTENDIBLE
@@ -202,6 +244,10 @@ export default {
                 subtitulo: "Legible",
                 tech: "web",
                 textoMostrado: "<p>Que el contenido sea legible y entendible." +
+                    "<p>Se debe determinar el idioma por defecto de la página programáticamente, excepto en los nombres propios, terminos técnicos, palabras de otro idioma.</p><br>"+
+                    "<img src='./imagenes/atributoLanguage.PNG' />"+
+                    "<p>Asimismo, para aquellas palabras que no se puedan traducir, será necesario aportar su significado.</p>"+
+                    "<p>Se puede incorporar un botón que haga la funcionalidad de 'Leer la página en alto' también.</p>"+
                     "</p>"
             },
             {
@@ -210,6 +256,8 @@ export default {
                 subtitulo: "Predecible",
                 tech: "web",
                 textoMostrado: "<p>Que las páginas webs se muestren y operen de forma predecible." +
+                    "<p>Para que sea predecible, es importante que cuando un elemento de nuestra web reciba el foco, que no se produzca un cambio de contexto. Cambiar una configuración de un elemento de la interfaz no necesariamente cambia el contexto de la web. Para realizar un cambio de contexto, siempre será avisando al usuario y confirmando la operación.</p>"+
+                    "<p>Si aparecen funcionalidades en la web repetidas, éstas deberán tener la misma funcionalidad en toda la web.</p>"+
                     "</p>"
             },
             {
@@ -218,6 +266,15 @@ export default {
                 subtitulo: "Asistencia de entrada",
                 tech: "web",
                 textoMostrado: "<p>Ayudar a los usuario a evitar errores." +
+                    "<p>En el caso de un formulario, se puede añadir instrucciones al inicio de la web para explicar como escribir correctamente cada campo de entrada.</p>"+
+                    "<p>Si un error de entrada es detectado, se tiene que avisar el usuario y describir al usuario el error. Por ejemplo, al no cumplir uno de los requisitos registrando una contraseña, o al no rellenar un campo necesario de un formulario.</p><br>"+
+                    "<p>En la siguiente imagen podemos ver que el atributo 'aria-invalid' se puede indicar mediante Javascript. De esta manera, los lectores de pantallas pueden saber cuando existe un error y avisarlo.</p>"+
+                    "<img src='./imagenes/ariainvalid.PNG' />"+
+                    "<br><p>También podemos avisar al usuario mediante el atributo role con valor 'alertdialog'. El lector de pantalla será capaz de leer estos atributos.</p>"+
+                    "<img src='./imagenes/roleAlertDialog.PNG'/>"+
+                    "<br><p>También es posible indicarle al lector de pantalla que un campo de texto es necesario rellenarlo.<br></p>"+
+                    "<img src='./imagenes/ariarequired.PNG' />"+
+                    "<p>Para las páginas web que poseen operaciones bancarias o compromisos legales es necesario que las operaciones sean reversibles, que los datos introducidos por el usuario sean comprobados y ofrecerles la oportunidad de corregirlos y que todo eso ocurra antes de realizar el envío de los datos.</p>"+
                     "</p>"
             },
             //WEB ROBUSTO
@@ -227,7 +284,13 @@ export default {
                 subtitulo: "Compatible",
                 tech: "web",
                 textoMostrado: "<p>Que el contenido actual y futuro pueda ser compatible en el mayor número de casos posible." +
-                    "</p>"
+                    "<p>Es necesario evitar ambigüedades en las páginas web, para que sea lo más compatible posible por otros agentes. En HTML, podemos añadir al inicio del fichero la declaración !DOCTYPE, para saber más fácilmente cual es la versión que se está usando. Con los ficheros XML podemos indicar la versión al principio también, solamente indicando el número de la versión.</p>"+
+                    "<p>Es importante no olvidarse de indicar los nombres de los componentes de la interfaz de usuario, sus roles, sus valores, sus propiedades y sus estados, puesto que se puede hacer pragramáticamente y ayudan a las tecnologías de apoyo a que puedan interpretar mejor la página. Todo esto lo podemos indicar con los llamados atributos Aria-*. Estos son unos ejemplos  de algunos de ellos:</p>"+
+                    "<br><img src='./imagenes/ariarequired.PNG'/>"+
+                    "<br><img src='./imagenes/ariainvalid.PNG'/>"+
+                    "<br><img src='./imagenes/arialabel.JPG'/>"+
+                    "<br><img src='./imagenes/arialabeledby.JPG'/>"+
+                "</p>"
             },
         ]
         };
