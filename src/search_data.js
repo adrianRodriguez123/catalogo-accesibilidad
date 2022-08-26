@@ -8,84 +8,54 @@ export default {
         //https://getbootstrap.com/docs/5.0/components/accordion/
         return {
             search: "",
-            textos: [{
+            textos: [
+                //ANDROID PERCEPTIBLE
+            {
                 id: 0,
                 titulo: "perceptible",
-                subtitulo: "Small Screen Size",
+                subtitulo: "Tamaño de pantalla pequeño",
                 tech: "android",
                 textoMostrado:
-
-                    "<p>One of the most common characteristics of mobile devices is the small size of their screens. This limited size places practical constraints on the amount of information that can be effectively perceived by users at any one time, even when high screen resolution might enable large amounts of information to be rendered.   The amount of information that can be displayed is even further limited when magnification is used, for example by people with low vision. See <a href='#zoom'>2.2 Zoom/Magnification</a>.</p>" +
-                    "<p>Some best practices for helping users to make the most of small screens include </p>" +
-                    "<ul>" +
-                    "<li>Consider mobile when initially designing the layout and relevancy of content. </li>" +
-                    "<li>Where necessary, adapt the information provided on mobile compared   to desktop/laptop versions with a dedicated mobile version or a   responsive design    " +
-                    "<ul>" +
-                    "<li>a dedicated mobile version contains content tailored for mobile use. For example, the content may contain fewer content modules, fewer images, or focus on important mobile usage scenarios. </li>" +
-                    "<li>a responsive design contains content that stays the same, but CSS   stylesheets are used to render it differently depending on the viewport   width. For example, on narrow screens the navigation menus may be hidden   until the user taps a menu button. </li>" +
-                    "</ul>" +
-                    "</li>" +
-                    "<li>Minimizing the amount of information that is put on each page compared to desktop/laptop versions by providing a dedicated mobile version or a responsive design:    </li>" +
-                    "<li>Providing a reasonable default size for content and touch controls. See <a href='#targetSize'>B.2 Touch Target Size and Spacing</a> to minimize the need to zoom in and out for users with low vision. </li>" +
-                    "<li> Adapting the length of link text to the viewport width. </li>" +
-                    "<li> Positioning form fields below, rather than beside, their labels (in portrait layout) </li>" +
-                    "</ul>"
+                    "<p>Los móviles poseen una pantalla bastante pequeña comparada con la de un ordenador. Esto es un inconveniente para aquellas personas con problemas de visión. Por tanto es necesario realizar las fuentes y los iconos más grandes."+
+                    "<p>También es necesario crear un diseño responsivo para que se adapte a todo tipo de pantallas móviles y minimizar la cantidad de información que se pone en cada página, en comparación con las versiones para ordenadores.</p>"+
+                    "<p>No hay que olvidarse del tamaño del área de pulsación los controles táctiles, para no tener que realizar zoom para pulsar.</p>"
             },
             {
                 id: 1,
                 titulo: "perceptible",
-                subtitulo: "Zoom/Magnification",
+                subtitulo: "Zoom/Aumento",
                 tech: "android",
-                textoMostrado: "<p>A variety of methods allow users to control content size on mobile devices with small screens. Some of these features are targeted at all users (e.g. browser “pinch zoom” features), while others tend to be made available as &quot;accessibility features&quot; targeted at people with visual or cognitive disabilities.</p>" +
-
-                    "<p><em>Note on reflow</em>: There are important accessibility differences between zoom/magnification features that horizontally reflow content, especially text, and those that do not. When text content is not reflowed, users must pan back and forth as they read each line.</p>" +
-
-                    "<p>Zoom/Magnification features include the following: </p>" +
-                    "<ul>" +
-                    "    <li>OS-level features" +
-                    "    <ul>" +
-                    "        <li> Set default text size (typically controlled from the display settings) <em>Note</em>: System text size is often not supported by mobile browsers. </li>" +
-                    "        <li> Magnify entire screen (typically controlled from the accessibility settings). <em>Note</em>: Using this setting requires the user to pan vertically and horizontally. </li>" +
-                    "        <li> Magnifying lens view under user's finger (typically controlled from the accessibility settings) </li>" +
-                    "    </ul>" +
-                    "    </li>" +
-                    "    <li>Browser-level features" +
-                    "    <ul>" +
-                    "        <li> Set default text size of text rendered in the browser's viewport</li>" +
-                    "        <li> Reader modes that render the main content without certain types of extraneous content and at a user-specified text size </li>" +
-                    "        <li> Magnify browser's viewport (typically 'pinch-zoom'). <em>Note</em>: Using this setting typically requires the user to pan vertically and horizontally, although some browsers have features that re-flow the content at the new magnification level, overriding author attempts to prevent pinch-zoom). </li>" +
-                    "        </ul>" +
-                    "        </li>" +
-                    "    </ul>" +
-                    "    </li>" +
-                    "</ul>" +
-                    "<p>The WCAG 2.0 success criterion that is most related to zoom/magnification is </p>" +
-                    "    <div> " +
-                    "    <ul><li><strong>1.4.4 Resize text</strong> (Level AA) </li></ul>" +
-                    "</div> " +
-                    "<p>SC 1.4.4 requires text to be resizable without assistive technology up to at least 200 percent. To meet this requirement content must not prevent text magnification by the user. </p>" +
-                    "<p>Some methods for supporting magnification/zoom include: </p>" +
-                    "<ul>" +
-                    "    <li>Use techniques that support text resizing   without requiring horizontal panning. Relying on full   viewport zooming (e.g. not blocking the browser's pinch zoom feature)   requires the user to pan horizontally as well as vertically.  </li>" +
-                    "    <li>Ensure that the browser pinch zoom is not blocked by the page's   viewport meta element so that it can be used to zoom the page to at least 200%.   Restrictive values for user-scalable and maximum-scale attributes of   this meta element should be avoided. While this   technique meets the success criteria it is less usable than supporting   text resizing features that reflow content to the user's chosen viewport   size.  </li>" +
-                    "    <li>Support for OS text size settings. For web content this will depend on browser support.</li>" +
-                    "    <li>Provide on-page controls to change the text size. </li>" +
-                    "    </ul>" +
-                    "<p>Accessibility features geared toward specific populations of people with   disabilities fall under the definition of assistive technology adopted   by WCAG and thus cannot be relied upon to meet success criterion 1.4.4.    For example, an OS-level zoom feature that magnifies all platform   content and has features to specifically support people with low vision   is likely considered an assistive technology. </p>"
+                textoMostrado: "<p>Existen diversos métodos que permiten a los usuarios controlar el tamaño de los contenidos en móviles. Uno de ellos puede ser mediante el apartado de configuración del propio teléfono, en la sección de accesibilidad.</p>"+
+                "<p>Hay que destacar la función de 'Pinch zoom' o 'Pellizco', con la que podemos hacer más grande o más pequeña nuestra pantalla. Está disponible en cualquier dispositivo móvil pero en Android lo podemos programar para nuestra app de la siguiente manera:</p>"+
+                "<img src='./imagenes/pinchzoom.PNG'/><br>"+
+                "<br>El tamaño de la fuente de los textos de nuestra app lo podemos indicar de la siguiente manera:"+
+                "<br><br><img src='./imagenes/fontsize.PNG'/>"
             },
             {
                 id: 2,
                 titulo: "perceptible",
-                subtitulo: "perceptible2",
+                subtitulo: "Contraste",
                 tech: "android",
-                textoMostrado: "perceptible2"
+                textoMostrado: "<p>Este punto es bastante importante para los usuarios de baja visión. Los "+
+                    "dispositivos móviles tienden más a utilizarse en entornos variados y por eso es más probable el deslumbramiento por el sol u otras fuentes."+
+                    "<p>Para monitores de 15 pulgadas con una resolución de 1024x768 y una distancia de visualización de 24 pulgadas, se considera suficiente una fuente de texto de 18 puntos o 14 si está en negrita, y así se podrá utilizar un menor contraste.</p>"+
+                    ""
+                    //"<p>La relación de contraste a seguir por los desarrolladores, se usará un contraste reducido cuando el texto sea 1'2 veces la negrita o 1'5 veces la del tamaño por defecto.</p>"
             },
             {
                 id: 3,
                 titulo: "perceptible",
-                subtitulo: "perceptible3",
+                subtitulo: "Diseño de pantallas (layouts)",
                 tech: "android",
-                textoMostrado: "perceptible3"
+                textoMostrado: "<p>Es recomendable usar headers o cabeceras para estructurar bien el contenido. Una persona que esté usando tecnologías de apoyo, tendrá más fácil la navegación por la app. Pero los lectores de pantalla no conocen que campo de texto es un header. ¿Cómo podemos conseguir eso? Con el atributo 'android:accessibilityHeading'.</p>"+
+                "<br><img src='./imagenes/accesibilityheading.PNG'/>"+
+                "<p>Otra manera de realizar la navegación más sencilla para las tecnologías de apoyo es agrupando los objetos. (SC 1.3.2). Para agruparlos, podemos realizar la vista 'focusable' o enfocable. Con los siguientes atributos podemos conseguirlo:</p>"+
+                "<br><p>Con el atributo 'android:focusable' decimos que esta vista tendrá el foco y el atributo 'android:focusableInTouchMode' decimos que no se permite el modo toque. Esto quiero decir que solo tendrá el foco este elemento, cuando sea leído por un lector de pantalla. Al realizar esto, la vista se vuelve no clickable.</p>"+
+                "<br><img src='./imagenes/focusable.PNG'/>"+
+                "<br><br><p>Aunque no lo parezca, es importante indicar que la habilitación de orientación vertical y horizontal es necesaria.</p>"+
+                "<p>También, hay que destacar el uso de las etiquetas correctamente, porque un lector de pantalla puede leer una etiqueta y no saber a qué elemento se refiere. Por ese motivo usamos el atributo 'android:labelFor':</p>"+
+                "<img src='./imagenes/labelFor.PNG'/>"+
+                ""
             },
             //WEB PERCEPTIBLE
             {
@@ -287,9 +257,9 @@ export default {
                     "<p>Es necesario evitar ambigüedades en las páginas web, para que sea lo más compatible posible por otros agentes. En HTML, podemos añadir al inicio del fichero la declaración !DOCTYPE, para saber más fácilmente cual es la versión que se está usando. Con los ficheros XML podemos indicar la versión al principio también, solamente indicando el número de la versión.</p>"+
                     "<p>Es importante no olvidarse de indicar los nombres de los componentes de la interfaz de usuario, sus roles, sus valores, sus propiedades y sus estados, puesto que se puede hacer pragramáticamente y ayudan a las tecnologías de apoyo a que puedan interpretar mejor la página. Todo esto lo podemos indicar con los llamados atributos Aria-*. Estos son unos ejemplos  de algunos de ellos:</p>"+
                     "<br><img src='./imagenes/ariarequired.PNG'/>"+
-                    "<br><img src='./imagenes/ariainvalid.PNG'/>"+
-                    "<br><img src='./imagenes/arialabel.JPG'/>"+
-                    "<br><img src='./imagenes/arialabeledby.JPG'/>"+
+                    "<br><br><img src='./imagenes/ariainvalid.PNG'/>"+
+                    "<br><br><img src='./imagenes/arialabel.JPG'/>"+
+                    "<br><br><img src='./imagenes/arialabeledby.JPG'/>"+
                 "</p>"
             },
         ]

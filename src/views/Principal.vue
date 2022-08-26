@@ -65,7 +65,7 @@
                 <b-tabs content-class="mt-3">
                   <!-- TODO https://es.vuejs.org/v2/style-guide/#Evitar-v-if-con-v-for-esencial-->
                   <!--https://getbootstrap.com/docs/5.0/components/accordion/-->
-                  <b-tab title="Android">
+                  <b-tab title="Android" active>
                     <div class="accordion" id="accordionExample">
 
                       <div v-for="textoIndividual in principioElegido($route.params.prin, android)" :key="textoIndividual.id">
@@ -86,7 +86,7 @@
                     </div>
                   </b-tab>
 
-                  <b-tab title="Web" active>
+                  <b-tab title="Web">
                     <div class="accordion" id="accordionExample">
 
                       <div v-for="textoIndividual in principioElegido($route.params.prin, web)" :key="textoIndividual.id">
