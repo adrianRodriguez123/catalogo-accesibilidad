@@ -9,57 +9,9 @@ export default {
         return {
             search: "",
             textos: [
-                //ANDROID PERCEPTIBLE
-            {
-                id: 0,
-                titulo: "perceptible",
-                subtitulo: "Tamaño de pantalla pequeño",
-                tech: "android",
-                textoMostrado:
-                    "<p>Los móviles poseen una pantalla bastante pequeña comparada con la de un ordenador. Esto es un inconveniente para aquellas personas con problemas de visión. Por tanto es necesario realizar las fuentes y los iconos más grandes."+
-                    "<p>También es necesario crear un diseño responsivo para que se adapte a todo tipo de pantallas móviles y minimizar la cantidad de información que se pone en cada página, en comparación con las versiones para ordenadores.</p>"+
-                    "<p>No hay que olvidarse del tamaño del área de pulsación los controles táctiles, para no tener que realizar zoom para pulsar.</p>"
-            },
-            {
-                id: 1,
-                titulo: "perceptible",
-                subtitulo: "Zoom/Aumento",
-                tech: "android",
-                textoMostrado: "<p>Existen diversos métodos que permiten a los usuarios controlar el tamaño de los contenidos en móviles. Uno de ellos puede ser mediante el apartado de configuración del propio teléfono, en la sección de accesibilidad.</p>"+
-                "<p>Hay que destacar la función de 'Pinch zoom' o 'Pellizco', con la que podemos hacer más grande o más pequeña nuestra pantalla. Está disponible en cualquier dispositivo móvil pero en Android lo podemos programar para nuestra app de la siguiente manera:</p>"+
-                "<img src='./imagenes/pinchzoom.PNG'/><br>"+
-                "<br>El tamaño de la fuente de los textos de nuestra app lo podemos indicar de la siguiente manera:"+
-                "<br><br><img src='./imagenes/fontsize.PNG'/>"
-            },
-            {
-                id: 2,
-                titulo: "perceptible",
-                subtitulo: "Contraste",
-                tech: "android",
-                textoMostrado: "<p>Este punto es bastante importante para los usuarios de baja visión. Los "+
-                    "dispositivos móviles tienden más a utilizarse en entornos variados y por eso es más probable el deslumbramiento por el sol u otras fuentes."+
-                    "<p>Para monitores de 15 pulgadas con una resolución de 1024x768 y una distancia de visualización de 24 pulgadas, se considera suficiente una fuente de texto de 18 puntos o 14 si está en negrita, y así se podrá utilizar un menor contraste.</p>"+
-                    ""
-                    //"<p>La relación de contraste a seguir por los desarrolladores, se usará un contraste reducido cuando el texto sea 1'2 veces la negrita o 1'5 veces la del tamaño por defecto.</p>"
-            },
-            {
-                id: 3,
-                titulo: "perceptible",
-                subtitulo: "Diseño de pantallas (layouts)",
-                tech: "android",
-                textoMostrado: "<p>Es recomendable usar headers o cabeceras para estructurar bien el contenido. Una persona que esté usando tecnologías de apoyo, tendrá más fácil la navegación por la app. Pero los lectores de pantalla no conocen que campo de texto es un header. ¿Cómo podemos conseguir eso? Con el atributo 'android:accessibilityHeading'.</p>"+
-                "<br><img src='./imagenes/accesibilityheading.PNG'/>"+
-                "<p>Otra manera de realizar la navegación más sencilla para las tecnologías de apoyo es agrupando los objetos. (SC 1.3.2). Para agruparlos, podemos realizar la vista 'focusable' o enfocable. Con los siguientes atributos podemos conseguirlo:</p>"+
-                "<br><p>Con el atributo 'android:focusable' decimos que esta vista tendrá el foco y el atributo 'android:focusableInTouchMode' decimos que no se permite el modo toque. Esto quiero decir que solo tendrá el foco este elemento, cuando sea leído por un lector de pantalla. Al realizar esto, la vista se vuelve no clickable.</p>"+
-                "<br><img src='./imagenes/focusable.PNG'/>"+
-                "<br><br><p>Aunque no lo parezca, es importante indicar que la habilitación de orientación vertical y horizontal es necesaria.</p>"+
-                "<p>También, hay que destacar el uso de las etiquetas correctamente, porque un lector de pantalla puede leer una etiqueta y no saber a qué elemento se refiere. Por ese motivo usamos el atributo 'android:labelFor':</p>"+
-                "<img src='./imagenes/labelFor.PNG'/>"+
-                ""
-            },
             //WEB PERCEPTIBLE
             {
-                id: 4,
+                id: 0,
                 titulo: "perceptible",
                 subtitulo: "Contenido no textual",
                 tech: "web",
@@ -77,7 +29,7 @@ export default {
                 "</p>"
             },
             {
-                id: 5,
+                id: 1,
                 titulo: "perceptible",
                 subtitulo: "Cotenido multimedia basado en el tiempo",
                 tech: "web",
@@ -92,7 +44,7 @@ export default {
                     "</p>"
             },
             {
-                id: 6,
+                id: 2,
                 titulo: "perceptible",
                 subtitulo: "Adaptable",
                 tech: "web",
@@ -115,7 +67,7 @@ export default {
                     "</p>"
             },
             {
-                id: 7,
+                id: 3,
                 titulo: "perceptible",
                 subtitulo: "Distinguible",
                 tech: "web",
@@ -132,7 +84,7 @@ export default {
             },
             //WEB OPERABLE
             {
-                id: 8,
+                id: 4,
                 titulo: "operable",
                 subtitulo: "Accesible desde el teclado",
                 tech: "web",
@@ -143,7 +95,7 @@ export default {
                     "</p>"
             },
             {
-                id: 9,
+                id: 5,
                 titulo: "operable",
                 subtitulo: "Suficiente tiempo",
                 tech: "web",
@@ -154,7 +106,7 @@ export default {
                     "</p>"
             },
             {
-                id: 10,
+                id: 6,
                 titulo: "operable",
                 subtitulo: "Convulsiones y reacciones físicas",
                 tech: "web",
@@ -163,7 +115,7 @@ export default {
                     "</p>"
             },
             {
-                id: 11,
+                id: 7,
                 titulo: "operable",
                 subtitulo: "Navegable",
                 tech: "web",
@@ -198,7 +150,7 @@ export default {
                     "</p>"
             },
             {
-                id: 12,
+                id: 8,
                 titulo: "operable",
                 subtitulo: "Modalidades de entrada",
                 tech: "web",
@@ -209,7 +161,7 @@ export default {
             },
             //WEB ENTENDIBLE
             {
-                id: 13,
+                id: 9,
                 titulo: "entendible",
                 subtitulo: "Legible",
                 tech: "web",
@@ -221,7 +173,7 @@ export default {
                     "</p>"
             },
             {
-                id: 14,
+                id: 10,
                 titulo: "entendible",
                 subtitulo: "Predecible",
                 tech: "web",
@@ -231,7 +183,7 @@ export default {
                     "</p>"
             },
             {
-                id: 15,
+                id: 11,
                 titulo: "entendible",
                 subtitulo: "Asistencia de entrada",
                 tech: "web",
@@ -249,7 +201,7 @@ export default {
             },
             //WEB ROBUSTO
             {
-                id: 16,
+                id: 12,
                 titulo: "robusto",
                 subtitulo: "Compatible",
                 tech: "web",
@@ -262,6 +214,75 @@ export default {
                     "<br><br><img src='./imagenes/arialabeledby.JPG'/>"+
                 "</p>"
             },
+            //ANDROID PERCEPTIBLE
+            {
+                id: 13,
+                titulo: "perceptible",
+                subtitulo: "Tamaño de pantalla pequeño",
+                tech: "android",
+                textoMostrado:
+                    "<p>Los móviles poseen una pantalla bastante pequeña comparada con la de un ordenador. Esto es un inconveniente para aquellas personas con problemas de visión. Por tanto es necesario realizar las fuentes y los iconos más grandes."+
+                    "<p>También es necesario crear un diseño responsivo para que se adapte a todo tipo de pantallas móviles y minimizar la cantidad de información que se pone en cada página, en comparación con las versiones para ordenadores.</p>"+
+                    "<p>No hay que olvidarse del tamaño del área de pulsación los controles táctiles, para no tener que realizar zoom para pulsar.</p>"
+            },
+            {
+                id: 14,
+                titulo: "perceptible",
+                subtitulo: "Zoom/Aumento",
+                tech: "android",
+                textoMostrado: "<p>Existen diversos métodos que permiten a los usuarios controlar el tamaño de los contenidos en móviles. Uno de ellos puede ser mediante el apartado de configuración del propio teléfono, en la sección de accesibilidad.</p>"+
+                "<p>Hay que destacar la función de 'Pinch zoom' o 'Pellizco', con la que podemos hacer más grande o más pequeña nuestra pantalla. Está disponible en cualquier dispositivo móvil pero en Android lo podemos programar para nuestra app de la siguiente manera:</p>"+
+                "<img src='./imagenes/pinchzoom.PNG'/><br>"+
+                "<br>El tamaño de la fuente de los textos de nuestra app lo podemos indicar de la siguiente manera:"+
+                "<br><br><img src='./imagenes/fontsize.PNG'/>"
+            },
+            {
+                id: 15,
+                titulo: "perceptible",
+                subtitulo: "Contraste",
+                tech: "android",
+                textoMostrado: "<p>Este punto es bastante importante para los usuarios de baja visión. Los "+
+                    "dispositivos móviles tienden más a utilizarse en entornos variados y por eso es más probable el deslumbramiento por el sol u otras fuentes."+
+                    "<p>El contraste es la diferencia deluz entre dos colores. Cuanto más contraste, mejor para que aquellas personas con problemas de vista. </p>"+
+                    "<p>Para monitores de 15 pulgadas con una resolución de 1024x768 y una distancia de visualización de 24 pulgadas, se considera suficiente una fuente de texto de 18 puntos o 14 si está en negrita</p>"+
+                    "<p>Se recomienda también usar el llamado 'dark mode' o 'modo oscuro' en nuestra app. Para las personas con problemas de visión, más específicamente las que ven manchas, o flotadores, es muy útil este modo ya que los flotadores son más visibles en un fondo blanco, y por lo tanto incomodan mucho más la usabilidad de nuestra app. Podemos programarlo de la siguiente manera:</p>"+
+                    "<br><img src='./imagenes/darkmode.PNG'/>"+
+                    "<br>El atributo color con nombre 'colorPrimary' corresponde al color de la barra superior y el atributo color con nombre  'colorAccent' corresponde a los colores de los controles de la interfaz. De esta manera los estamos sobreescribiendo para que tengan el color que nosotros queremos."+
+                    "<p>Con la ayuda de Material Design, la guía oficial de Google para el diseño de interfaces, nos podemos encargar de los demás colores, ya que aquí solo gestionamos 2 (aunque podría ser suficiente).</p>"+
+                    "<br><img src='./imagenes/darkmode2.PNG'/>"+
+                    "<p>Después en el método onCreate() del activity solo tendríamos que habilitar el modo oscuro. Se recomienda al desarrollador, que realice una funcionalidad para permitir al usuario escoger el modo de vista que quiera.</p>"+
+                    "<br><img src='./imagenes/darkmode3.PNG'/>"+
+                    ""
+            },
+            {
+                id: 16,
+                titulo: "perceptible",
+                subtitulo: "Diseño de pantallas (layouts)",
+                tech: "android",
+                textoMostrado: "<p>Es recomendable usar headers o cabeceras para estructurar bien el contenido. Una persona que esté usando tecnologías de apoyo, tendrá más fácil la navegación por la app. Pero los lectores de pantalla no conocen que campo de texto es un header. ¿Cómo podemos conseguir eso? Con el atributo 'android:accessibilityHeading'.</p>"+
+                "<br><img src='./imagenes/accesibilityheading.PNG'/>"+
+                "<p>Otra manera de realizar la navegación más sencilla para las tecnologías de apoyo es agrupando los objetos. (SC 1.3.2). Para agruparlos, podemos realizar la vista 'focusable' o enfocable. Con los siguientes atributos podemos conseguirlo:</p>"+
+                "<br><p>Con el atributo 'android:focusable' decimos que esta vista tendrá el foco y el atributo 'android:focusableInTouchMode' decimos que no se permite el modo toque. Esto quiero decir que solo tendrá el foco este elemento, cuando sea leído por un lector de pantalla. Al realizar esto, la vista se vuelve no clickable.</p>"+
+                "<br><img src='./imagenes/focusable.PNG'/>"+
+                "<br><br><p>Aunque no lo parezca, es importante indicar que la habilitación de orientación vertical y horizontal es necesaria.</p>"+
+                "<p>También, hay que destacar el uso de las etiquetas correctamente, porque un lector de pantalla puede leer una etiqueta y no saber a qué elemento se refiere. Por ese motivo usamos el atributo 'android:labelFor':</p>"+
+                "<img src='./imagenes/labelFor.PNG'/>"+
+                ""
+            },
+            //ANDROID OPERABLE
+            {
+                id: 17,
+                titulos: "operable",
+                subtitulo: "Navegando por la pantalla",
+                tech: "android",
+                textoMostrado: "<p>A diferencia de un ordenador, un teléfono no posee un teclado. Este es un        componente vital para dar soporte a las personas con problemas físicos. Pero, aunque no se disponga de uno, siempre hay algún recurso. Se debe mencionar que sí se puede usar un teclado, cuando la app se esté desarrollando en un emulador.</p>"+
+                "<p>Para mejorar la navegación por la app, y por tanto la operabilidad, podemos usar la aplicación TalkBack. Esta aplicación es un servicio de accesibilidad creado por Android, que ayuda a los usuarios con discapacidades a poder usar los dispositivos.</p>"+
+                "<p>Para que TalkBack pueda navegar por la pantalla, se debe añadir el atributo 'android:nextFocusForward'. De esta forma, podemos indicarle a TalkBack cual es el siguiente elemento para moverse por la pantalla.</p>"+
+                "<br><img src='./imagenes/navegandoPantalla.PNG'/>"+
+                "<p>Para mejorar la navegación por la pantalla, también podemos hacer uso del objeto llamado TtsSpan (Text-to-speech span). Con este objeto podremos decirle al lector de pantalla que lea en voz alta el texto que nosotros le indiquemos.</p>"+
+                "<p></p>"+
+                ""
+            }
         ]
         };
     }
