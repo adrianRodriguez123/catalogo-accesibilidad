@@ -272,7 +272,7 @@ export default {
             //ANDROID OPERABLE
             {
                 id: 17,
-                titulos: "operable",
+                titulo: "operable",
                 subtitulo: "Navegando por la pantalla",
                 tech: "android",
                 textoMostrado: "<p>A diferencia de un ordenador, un teléfono no posee un teclado. Este es un        componente vital para dar soporte a las personas con problemas físicos. Pero, aunque no se disponga de uno, siempre hay algún recurso. Se debe mencionar que sí se puede usar un teclado, cuando la app se esté desarrollando en un emulador.</p>"+
@@ -286,7 +286,7 @@ export default {
             //ANDROID ENTENDIBLE
             {
                 id: 18,
-                titulos: "entendible",
+                titulo: "entendible",
                 subtitulo: "Traducciones",
                 tech: "android",
                 textoMostrado: "<p>A pesar de la operabilidad, y la perceptibilidad, nuestra app debe de ser entendible. Es por eso que debemos pensar en ciertos aspectos, como pueden ser la internacionalización, evitar grandes bloques de texto innecesarios, evitar palabras innecesarios que no se puedan entender o explicar abreviaciones, entre otros.</p>"+
@@ -296,7 +296,7 @@ export default {
             //ANDROID ROBUSTO
             {
                 id: 19,
-                titulos: "robusto",
+                titulo: "robusto",
                 subtitulo: "Elementos del sistema",
                 tech: "android",
                 textoMostrado: "<p>Una app robusta es aquella en que se puede acceder de varias formas, incluyendo con diferentes tecnologías de apoyo.</p>"+
@@ -304,8 +304,8 @@ export default {
                 ""
             },
             {
-                id: 19,
-                titulos: "robusto",
+                id: 20,
+                titulo: "robusto",
                 subtitulo: "Realizando acciones",
                 tech: "android",
                 textoMostrado: "<p>Es importante saber como podemos realizar acciones por el usuario, como se suele hacer en servicios de accesibilidad. Estos servicios son los que pueden realizar acciones por los usuarios. Con la clase AccessibilityNodeInfo nos podemos ayudar para realizar todo este tipo de cosas, como por ejemplo funciones drag and drop, hacer click, mantener el foco, copiar, pegar,etc. Este es un pequeño ejemplo:</p>"+
