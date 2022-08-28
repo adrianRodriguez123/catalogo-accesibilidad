@@ -282,7 +282,36 @@ export default {
                 "<p>Para mejorar la navegación por la pantalla, también podemos hacer uso del objeto llamado TtsSpan (Text-to-speech span). Con este objeto podremos decirle al lector de pantalla que lea en voz alta el texto que nosotros le indiquemos.</p>"+
                 "<p></p>"+
                 ""
-            }
+            },
+            //ANDROID ENTENDIBLE
+            {
+                id: 18,
+                titulos: "entendible",
+                subtitulo: "Traducciones",
+                tech: "android",
+                textoMostrado: "<p>A pesar de la operabilidad, y la perceptibilidad, nuestra app debe de ser entendible. Es por eso que debemos pensar en ciertos aspectos, como pueden ser la internacionalización, evitar grandes bloques de texto innecesarios, evitar palabras innecesarios que no se puedan entender o explicar abreviaciones, entre otros.</p>"+
+                "<p>Se recomienda guardar todas las cadenas de texto o 'strings' en el fichero 'strings.xml', dentro de la carpeta 'resources'. De esta manera podremos internacionalizar nuestra aplicación y podemos añadirle traducciones. Una vez añadidos todos los 'strings', para cambiar el idioma de nuestra app podremos realizarlo desde la configuración de nuestra teléfono.</p>"+
+                ""
+            },
+            //ANDROID ROBUSTO
+            {
+                id: 19,
+                titulos: "robusto",
+                subtitulo: "Elementos del sistema",
+                tech: "android",
+                textoMostrado: "<p>Una app robusta es aquella en que se puede acceder de varias formas, incluyendo con diferentes tecnologías de apoyo.</p>"+
+                "<p>Una forma de mostrar robustez, es usando los propios elementos de Android, ya que incluyen todo lo que necesitas para realizar la accesibilidad de la app.</p>"+
+                ""
+            },
+            {
+                id: 19,
+                titulos: "robusto",
+                subtitulo: "Realizando acciones",
+                tech: "android",
+                textoMostrado: "<p>Es importante saber como podemos realizar acciones por el usuario, como se suele hacer en servicios de accesibilidad. Estos servicios son los que pueden realizar acciones por los usuarios. Con la clase AccessibilityNodeInfo nos podemos ayudar para realizar todo este tipo de cosas, como por ejemplo funciones drag and drop, hacer click, mantener el foco, copiar, pegar,etc. Este es un pequeño ejemplo:</p>"+
+                "<img src='./imagenes/accesibilitynodeinfo.PNG'/>"+
+                ""
+            },
         ]
         };
     }
