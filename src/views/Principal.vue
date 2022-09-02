@@ -34,7 +34,7 @@
                                 </nav>
                             </div>
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="elementoSeleccionado('conformidad')" data-bs-target="#collapseConformidad" aria-expanded="false" aria-controls="collapsePages">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(4);elementoSeleccionado('conformidad')" :class="{marcado: activeIndex==4}" data-bs-target="#collapseConformidad" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Conformidad
                                 <!--<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
@@ -48,12 +48,12 @@
                                 </nav>
                             </div>-->
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="elementoSeleccionado('herramienta')" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(5);elementoSeleccionado('herramienta')" :class="{marcado: activeIndex==5}" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Herramientas
                             </a>
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="elementoSeleccionado('quien')" data-bs-target="#collapseQuienes" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(6);elementoSeleccionado('quien')" :class="{marcado: activeIndex==6}" data-bs-target="#collapseQuienes" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Quien soy
                             </a>
