@@ -25,34 +25,37 @@
                                 Principios
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <!--TODO https://getbootstrap.com/docs/4.0/components/navs/#regarding-accessibility-->
                             <div class="collapse" id="collapsePrincipios" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <router-link :to="'/principal/perceptible'"><a class="nav-link" @click="toggleActive(0)" :class="{marcado: activeIndex==0}" href="#">Perceptible</a></router-link>
-                                    <router-link :to="'/principal/operable'"><a class="nav-link" @click="toggleActive(1)" :class="{marcado: activeIndex==1}" href="#">Operable</a></router-link>
-                                    <router-link :to="'/principal/entendible'"><a class="nav-link" @click="toggleActive(2)" :class="{marcado: activeIndex==2}" href="#">Entendible</a></router-link>
-                                    <router-link :to="'/principal/robusto'"><a class="nav-link" @click="toggleActive(3)" :class="{marcado: activeIndex==3}" href="#">Robusto</a></router-link>
+                                    <router-link :to="'/principal/perceptible'"><a class="nav-link" @click="toggleActive(0);elementoSeleccionado('principio')" :class="{marcado: activeIndex==0}" href="#">Perceptible</a></router-link>
+                                    <router-link :to="'/principal/operable'"><a class="nav-link" @click="toggleActive(1);elementoSeleccionado('principio')" :class="{marcado: activeIndex==1}" href="#">Operable</a></router-link>
+                                    <router-link :to="'/principal/entendible'"><a class="nav-link" @click="toggleActive(2);elementoSeleccionado('principio')" :class="{marcado: activeIndex==2}" href="#">Entendible</a></router-link>
+                                    <router-link :to="'/principal/robusto'"><a class="nav-link" @click="toggleActive(3);elementoSeleccionado('principio')" :class="{marcado: activeIndex==3}" href="#">Robusto</a></router-link>
                                 </nav>
                             </div>
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseConformidad" aria-expanded="false" aria-controls="collapsePages">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="elementoSeleccionado('conformidad')" data-bs-target="#collapseConformidad" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Conformidad
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                <!--<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
                             </a>
-
+<!--PONEMOS 3 PESTAÑAS EN EL COMPONENTE
                             <div class="collapse" id="collapseConformidad" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="#">Nivel A</a>
                                     <a class="nav-link" href="#">Nivel AA</a>
                                     <a class="nav-link" href="#">Nivel AAA</a>
                                 </nav>
-                            </div>
+                            </div>-->
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="elementoSeleccionado('herramienta')" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Herramientas
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="elementoSeleccionado('quien')" data-bs-target="#collapseQuienes" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Quien soy
                             </a>
                         </div>
                     </div>
@@ -60,11 +63,9 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-              <div class="container-fluid px-4">
+              <div class="container-fluid px-4" v-if="componenteActivoPrincipios">
                 <h1 class="mt-4"></h1>
                 <b-tabs content-class="mt-3">
-                  <!-- TODO https://es.vuejs.org/v2/style-guide/#Evitar-v-if-con-v-for-esencial-->
-                  <!--https://getbootstrap.com/docs/5.0/components/accordion/-->
                   <b-tab title="Android" active>
                     <div class="accordion" id="accordionExample">
 
@@ -109,15 +110,30 @@
                 </b-tabs>
                   
               </div>
+
+              <div class="container-fluid px-4" v-if="componenteActivoConformidad">
+                <Conformidad></Conformidad>
+              </div>
+
+              <div class="container-fluid px-4" v-if="componenteActivoHerramientas">
+                <Herramienta></Herramienta>
+              </div>
+
+              <div class="container-fluid px-4" v-if="componenteActivoQuien">
+                <Quien></Quien>
+              </div>
+
+              
             </div>
         </div>
   </div>
 </template>
 
 <script>
-//import Menu from "../components/Menu.vue"
 import Texto from "../components/Texto.vue"
-//import Nav from "../components/Nav.vue"
+import Conformidad from "../components/Conformidad.vue"
+import Herramienta from "../components/Herramientas.vue"
+import Quien from "../components/Quienes.vue"
 import icons from '../assets/js/iconosFontAwesome.js'
 import scripts from '../assets/js/scriptsPrincipal.js'
 import bootstrapBundle from '../assets/js/bootstrapBundle.js'
@@ -127,9 +143,10 @@ export default {
   name: 'App',
   mixins: [Search_Data],
   components: {
-    //Menu,
-    //Nav,
-    Texto
+    Texto,
+    Conformidad,
+    Herramienta,
+    Quien
     
   },
   data(){
@@ -137,7 +154,11 @@ export default {
       activeIndex: null,
       isMarcado: false,
       android: "android",
-      web: "web"
+      web: "web",
+      componenteActivoPrincipios: true,
+      componenteActivoConformidad: false,
+      componenteActivoHerramientas: false,
+      componenteActivoQuien: false
             
     }
   },
@@ -160,6 +181,34 @@ export default {
     //Método para activar o desactivar el fondo que se muestra al hacer click en un elemento del menú
     toggleActive(index){
       this.activeIndex = index;
+    },
+
+    elementoSeleccionado(comp){
+      if(comp=="quien"){
+        this.componenteActivoPrincipios = false;
+        this.componenteActivoConformidad = false;
+        this.componenteActivoHerramientas = false;
+        this.componenteActivoQuien = true;
+
+      }else if(comp=="herramienta"){
+        this.componenteActivoPrincipios = false;
+        this.componenteActivoConformidad = false;
+        this.componenteActivoHerramientas = true;
+        this.componenteActivoQuien = false;
+
+      }else if(comp=="conformidad"){
+        this.componenteActivoPrincipios = false;
+        this.componenteActivoConformidad = true;
+        this.componenteActivoHerramientas = false;
+        this.componenteActivoQuien = false;
+
+      }else if(comp=="principio"){
+        this.componenteActivoPrincipios = true;
+        this.componenteActivoConformidad = false;
+        this.componenteActivoHerramientas = false;
+        this.componenteActivoQuien = false;
+      }
+       
     }
   },//Con el watch podemos controlar lo que ocurre al cambiar de ruta
   created() {
