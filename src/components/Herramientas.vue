@@ -25,8 +25,8 @@
                     <div class="candidate-list-info">
                       <div class="candidate-list-title">
                         <p>Es una aplicación para Android, y se encarga de ayudar a personas con discapacidad intelectual a interactuar con sus dispositivos.
-                            Este es el enlace para descargarla, aunque viene preinstalada: 
-                            https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback&hl=es&gl=US
+                            Este es el enlace para descargarla, aunque viene preinstalada: <a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback&hl=es&gl=US">Test de accesibilidad de Google</a>
+                            
                         </p>
                       </div>
                     </div>
@@ -52,7 +52,7 @@
                     <div class="candidate-list-info">
                       <div class="candidate-list-title">
                         <p>Wave es un conjunto de herramientas que ayuda a los desarrolladores a hacer su web accesible. Proporciona una API, con la cual se pueden realizar peticiones
-                            e integrarlos en diferentes herramientas. También dispone de extensiones para el navegador. Podemos encontrarla aquí: https://wave.webaim.org/
+                            e integrarlos en diferentes herramientas. También dispone de extensiones para el navegador. Podemos encontrarla aquí: <a href="https://wave.webaim.org/">Wave</a>
                         </p>
                       </div>
                     </div>
@@ -78,7 +78,7 @@
                     <div class="candidate-list-info">
                       <div class="candidate-list-title">
                         <p>Ésta es una herramienta para la accesibilidad web. Nos ofrece varios servicios, uno de ellos resulta bastante interesante. Es un servicio online para revisar
-                            la accesibilidad de una determinada URL. La podemos encontrar aquí: https://www.tawdis.net/index
+                            la accesibilidad de una determinada URL. La podemos encontrar aquí: <a href="https://www.tawdis.net/index">Tawdis</a>
                         </p>
                       </div>
                     </div>
@@ -104,7 +104,7 @@
                     <div class="candidate-list-info">
                       <div class="candidate-list-title">
                         <p>Es una extensión de Google Chrome para realizar auditoría de accesibilidad web. Los resultados nos lo devuelven como un informe donde nos indica los errores violados en cuanto a
-                            la accesibilidad. La podemos encontrar aquí: https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en
+                            la accesibilidad. La podemos encontrar aquí: <a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en">Accessibility Developer Tools</a>
                         </p>
                       </div>
                     </div>
@@ -126,10 +126,10 @@
 body{
     background-color: #f8f9fa!important
 }
-
+/*
 img{
     width: 100%;
-}
+}*/
 
 .imagenHerramienta{
     flex-shrink: 0;
