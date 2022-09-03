@@ -20,7 +20,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Elementos</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePrincipios" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePrincipios" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Principios
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -34,28 +34,20 @@
                                 </nav>
                             </div>
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(4);elementoSeleccionado('conformidad')" :class="{marcado: activeIndex==4}" data-bs-target="#collapseConformidad" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            <a style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(4);elementoSeleccionado('conformidad')" :class="{marcado: activeIndex==4}" data-bs-target="#collapseConformidad" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-thumbs-up"></i></div>
                                 Conformidad
                                 <!--<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
                             </a>
-<!--PONEMOS 3 PESTAÑAS EN EL COMPONENTE
-                            <div class="collapse" id="collapseConformidad" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="#">Nivel A</a>
-                                    <a class="nav-link" href="#">Nivel AA</a>
-                                    <a class="nav-link" href="#">Nivel AAA</a>
-                                </nav>
-                            </div>-->
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(5);elementoSeleccionado('herramienta')" :class="{marcado: activeIndex==5}" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            <a style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(5);elementoSeleccionado('herramienta')" :class="{marcado: activeIndex==5}" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                                 Herramientas
                             </a>
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(6);elementoSeleccionado('quien')" :class="{marcado: activeIndex==6}" data-bs-target="#collapseQuienes" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Quien soy
+                            <a style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(6);elementoSeleccionado('quien')" :class="{marcado: activeIndex==6}" data-bs-target="#collapseQuienes" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-brands fa-readme"></i></div>
+                                ¿Quién soy?
                             </a>
                         </div>
                     </div>

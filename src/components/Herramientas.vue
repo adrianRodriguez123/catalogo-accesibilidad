@@ -78,7 +78,7 @@
                   <div class="candidate-list-details">
                     <div class="candidate-list-info">
                       <div class="candidate-list-title">
-                        <p>Ésta es una herramienta para la accesibilidad web. Nos ofrece varios servicios, uno de ellos resulta bastante interesante. Es un servicio online para revisar
+                        <p>Esta es una herramienta para la accesibilidad web. Nos ofrece varios servicios, uno de ellos resulta bastante interesante. Es un servicio online para revisar
                             la accesibilidad de una determinada URL. La podemos encontrar aquí: <a href="https://www.tawdis.net/index">Tawdis</a>
                         </p>
                       </div>
