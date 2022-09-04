@@ -13,28 +13,28 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
+                        <span aria-hidden="true" class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa-brands fa-android fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Android</h4>
-                        <p class="text-muted">Puedes realizar tu aplicación Android accesible!</p>
+                        <p>Puedes realizar tu aplicación Android accesible!</p>
                     </div>
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
+                        <span aria-hidden="true" class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa-solid fa-desktop fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Web</h4>
-                        <p class="text-muted">También puedes hacer tu web accesible.</p>
+                        <p>También puedes hacer tu web accesible.</p>
                     </div>
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
+                        <span aria-hidden="true" class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa-solid fa-universal-access fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Accesibilidad</h4>
-                        <p class="text-muted">Si no sabes como aplicar la accesibilidad en Android o en web, aquí puedes aprender.</p>
+                        <p>Si no sabes como aplicar la accesibilidad en Android o en web, aquí puedes aprender.</p>
                     </div>
                 </div>
             </div>
@@ -63,59 +63,4 @@ window.bootstrap = require('../assets/js/bootstrapBundle.js')
 @import '../assets/css/fuenteMontserrat.css';
 @import '../assets/css/fuenteRoboto.css';
 
-/*
-#catalogoHome{
-    width: 100%;
-    height: 2000px;
-}
-
-.elementoHome{
-    width: 100%;
-    height: 300px;
-}
-
-.primeroPrincipal{
-    position: relative;
-}
-
-img{
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    width: 100%;
-}
-
-#elementoHomePrimero{
-    position: absolute;
-    top: 40%;
-    left: 30%;
-    text-align: center;
-}
-
-#elementoHomeSegundo{
-    position: relative;
-    top: 20%;
-    left: 42%;
-    font-size: 30px;
-}
-
-#elementoHomeTercero{
-    position: relative;
-    top: 20%;
-    left: 42%;
-    font-size: 30px;
-}
-
-.btn {
-  border: none;
-  background-color: inherit;
-  padding: 14px 28px;
-  font-size: 16px;
-  
-  cursor: pointer;
-  display: inline-block;
-}
-
-.btn:hover {background: #eee;}
-*/
 </style>
