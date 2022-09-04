@@ -11303,9 +11303,10 @@ textarea.form-control-lg {
   }
 }
 html,
-body {
+/*XXX*/
+/*body {
   height: 100%;
-}
+}*/
 
 #layoutAuthentication {
   display: flex;

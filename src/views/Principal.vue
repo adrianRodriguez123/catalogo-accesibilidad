@@ -19,7 +19,7 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Elementos</div>
+                            <div style="color: white" class="sb-sidenav-menu-heading">Elementos</div>
                             <a style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePrincipios" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Principios
@@ -27,15 +27,15 @@
                             </a>
                             <div class="collapse" id="collapsePrincipios" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <router-link :to="'/principal/perceptible'"><a class="nav-link" @click="toggleActive(0);elementoSeleccionado('principio')" :class="{marcado: activeIndex==0}" href="#">Perceptible</a></router-link>
-                                    <router-link :to="'/principal/operable'"><a class="nav-link" @click="toggleActive(1);elementoSeleccionado('principio')" :class="{marcado: activeIndex==1}" href="#">Operable</a></router-link>
-                                    <router-link :to="'/principal/entendible'"><a class="nav-link" @click="toggleActive(2);elementoSeleccionado('principio')" :class="{marcado: activeIndex==2}" href="#">Entendible</a></router-link>
-                                    <router-link :to="'/principal/robusto'"><a class="nav-link" @click="toggleActive(3);elementoSeleccionado('principio')" :class="{marcado: activeIndex==3}" href="#">Robusto</a></router-link>
+                                    <router-link :to="'/principal/perceptible'"><a style="color: white" class="nav-link" @click="toggleActive(0);elementoSeleccionado('principio')" :class="{marcado: activeIndex==0}" href="#">Perceptible</a></router-link>
+                                    <router-link :to="'/principal/operable'"><a style="color: white" class="nav-link" @click="toggleActive(1);elementoSeleccionado('principio')" :class="{marcado: activeIndex==1}" href="#">Operable</a></router-link>
+                                    <router-link :to="'/principal/entendible'"><a style="color: white" class="nav-link" @click="toggleActive(2);elementoSeleccionado('principio')" :class="{marcado: activeIndex==2}" href="#">Entendible</a></router-link>
+                                    <router-link :to="'/principal/robusto'"><a style="color: white" class="nav-link" @click="toggleActive(3);elementoSeleccionado('principio')" :class="{marcado: activeIndex==3}" href="#">Robusto</a></router-link>
                                 </nav>
                             </div>
 
                             <a style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(4);elementoSeleccionado('conformidad')" :class="{marcado: activeIndex==4}" data-bs-target="#collapseConformidad" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+                                <div class="sb-nav-link-icon"><i class="far fa-thumbs-up"></i></div>
                                 Conformidad
                                 <!--<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
                             </a>
@@ -51,10 +51,10 @@
                             </a>
                         </div>
                     </div>
-                    
                 </nav>
             </div>
             <div id="layoutSidenav_content">
+              <main>
               <div class="container-fluid px-4" v-if="componenteActivoPrincipios">
                 <h1 class="mt-4"></h1>
                 <b-tabs content-class="mt-3">
@@ -102,7 +102,6 @@
                 </b-tabs>
                   
               </div>
-
               <div class="container-fluid px-4" v-if="componenteActivoConformidad">
                 <Conformidad></Conformidad>
               </div>
@@ -116,6 +115,7 @@
               </div>
 
               
+              </main>
             </div>
         </div>
   </div>

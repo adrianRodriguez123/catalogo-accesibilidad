@@ -18,7 +18,7 @@
         <br>
         
         <h3 class="tituloQuien">¿Dónde?</h3>
-        <p class="textoQuien">En mi repositorio de Github puedes encontra el código fuente de la aplicación. 
+        <p class="textoQuien">En mi repositorio de Github puedes encontrar el código fuente de la aplicación. 
             <br><a href="https://github.com/adrianRodriguez123/catalogo-accesibilidad">https://github.com/adrianRodriguez123/catalogo-accesibilidad</a>
             <br>
             <br>También puedes encontrar en mi Gist los ficheros con el código fuente de las imágenes en la categoría de Principios. Aquí lo tienes:

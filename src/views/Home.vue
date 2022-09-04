@@ -11,104 +11,36 @@
 
         <section class="page-section" id="android">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Android</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
                 <div class="row text-center">
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa-brands fa-android fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">E-Commerce</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa-solid fa-mobile-screen fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Responsive Design</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa-brands fa-accessible-icon fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Web Security</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr>
-        <section class="page-section" id="web">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase" style="color:black">Web</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa-solid fa-computer-mouse fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">E-Commerce</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Android</h4>
+                        <p class="text-muted">Puedes realizar tu aplicación Android accesible!</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa-solid fa-desktop fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Responsive Design</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Web</h4>
+                        <p class="text-muted">También puedes hacer tu web accesible.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa-solid fa-universal-access fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Web Security</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Accesibilidad</h4>
+                        <p class="text-muted">Si no sabes como aplicar la accesibilidad en Android o en web, aquí puedes aprender.</p>
                     </div>
                 </div>
             </div>
         </section>
-
     </div>
-    <!--<div id="catalogoHome">
-        <div class="elementoHome primeroPrincipal" style="background-color: #0077bf">
-            <div id="elementoHomePrimero">
-                <h1>CATÁLOGO DE ACCESIBILIDAD</h1>
-                <br>
-                <br>
-                <p>¿Eres desarrollador? ¡No olvides de realizar tu app o web accesible!</p>
-            </div>
-        </div>
-        <div class="elementoHome">
-            <div id="elementoHomeSegundo">
-                
-                <h3>ANDROID</h3>
-                <router-link :to="{name: 'Principal'}">
-                    <button class="btn" type="button">Leer</button>
-                </router-link>
-            
-            </div>
-        </div>
-        <div class="elementoHome" style="background-color: #0077bf">
-            <div id="elementoHomeTercero">
-                <h3>TEST</h3>
-                <router-link :to="{name: 'Principal'}">
-                    <button class="btn" type="button">Leer</button>
-                </router-link>
-        
-            </div>
-        </div>
-    </div>-->
+    
 </template>
 
 <script>
