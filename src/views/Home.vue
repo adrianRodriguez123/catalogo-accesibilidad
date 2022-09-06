@@ -5,7 +5,8 @@
             <div class="container">
                 <div class="masthead-subheading">¿Eres desarrollador?</div>
                 <div class="masthead-heading text-uppercase">¡Bienvenido al catálogo de accesibilidad!</div>
-                <router-link :to="'/principal/perceptible'"><a class="btn btn-light btn-lg text-uppercase" href="#">Entra</a></router-link>
+                <!--<router-link :to="{ name: 'Principal'}"><a class="btn btn-light btn-lg text-uppercase">Entra</a></router-link>-->
+                <a class="btn btn-light btn-lg text-uppercase" href="catalogo-accesibilidad#/principal">Entra</a>
             </div>
         </header>
 
@@ -50,10 +51,16 @@ import icons from '../assets/js/iconosFontAwesome.js'
 export default {
     name: 'Home',
     components: {
+    },
+    methods: {
+        irAPrincipal(){
+            this.$router.push({ name: 'Principal'});
+        },
     }
 }
 //Sin esta linea no reconoce bootstrap
 window.bootstrap = require('../assets/js/bootstrapBundle.js')
+
 
 
 </script>
