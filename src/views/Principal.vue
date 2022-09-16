@@ -19,7 +19,7 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div style="color: white" class="sb-sidenav-menu-heading">Elementos</div>
+                            <h5 style="color: white;padding: 1.75rem 1rem 0.75rem;font-size: 0.75rem;font-weight: bold; text-transform: uppercase;">Elementos</h5>
                             <a style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePrincipios" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Principios
