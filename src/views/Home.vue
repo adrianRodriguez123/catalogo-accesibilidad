@@ -3,7 +3,7 @@
 
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">¿Eres desarrollador?</div>
+                <h1><div class="masthead-subheading">¿Eres desarrollador?</div></h1>
                 <div class="masthead-heading text-uppercase">¡Bienvenido al catálogo de accesibilidad!</div>
                 <router-link aria-label="Entrar en la página principal" :to="{ name: 'Principal'}"><a class="btn btn-light btn-lg text-uppercase">Entra</a></router-link>
             </div>
