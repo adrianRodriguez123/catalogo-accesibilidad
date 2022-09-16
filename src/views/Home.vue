@@ -55,6 +55,10 @@ export default {
         irAPrincipal(){
             this.$router.push({ name: 'Principal'});
         },
+    },
+    created() {
+        const html = document.documentElement // returns the html tag
+        html.setAttribute('lang', 'es')
     }
 }
 //Sin esta linea no reconoce bootstrap
