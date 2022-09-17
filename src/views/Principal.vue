@@ -2,7 +2,7 @@
   <div><!--https://startbootstrap.com/previews/sb-admin-->
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/catalogo-accesibilidad">Catálogo</a>
+            <a aria-label="Volver a la página de bienvenida" class="navbar-brand ps-3" href="/catalogo-accesibilidad">Catálogo</a>
             <!-- Sidebar Toggle-->
             <!--<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>-->
             <!-- Navbar Search-->
@@ -20,32 +20,32 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <h1 style="color: white;padding: 1.75rem 1rem 0.75rem;font-size: 0.75rem;font-weight: bold; text-transform: uppercase;">Elementos</h1>
-                            <a style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePrincipios" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a aria-label="Principios" style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePrincipios" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Principios
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapsePrincipios" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <router-link :to="'/principal/perceptible'"><a style="color: white" class="nav-link" @click="toggleActive(0);elementoSeleccionado('principio')" :class="{marcado: activeIndex==0}" href="#">Perceptible</a></router-link>
-                                    <router-link :to="'/principal/operable'"><a style="color: white" class="nav-link" @click="toggleActive(1);elementoSeleccionado('principio')" :class="{marcado: activeIndex==1}" href="#">Operable</a></router-link>
-                                    <router-link :to="'/principal/entendible'"><a style="color: white" class="nav-link" @click="toggleActive(2);elementoSeleccionado('principio')" :class="{marcado: activeIndex==2}" href="#">Entendible</a></router-link>
-                                    <router-link :to="'/principal/robusto'"><a style="color: white" class="nav-link" @click="toggleActive(3);elementoSeleccionado('principio')" :class="{marcado: activeIndex==3}" href="#">Robusto</a></router-link>
+                                    <router-link :to="'/principal/perceptible'"><a aria-label="Perceptible" style="color: white" class="nav-link" @click="toggleActive(0);elementoSeleccionado('principio')" :class="{marcado: activeIndex==0}" href="#">Perceptible</a></router-link>
+                                    <router-link :to="'/principal/operable'"><a aria-label="Operable" style="color: white" class="nav-link" @click="toggleActive(1);elementoSeleccionado('principio')" :class="{marcado: activeIndex==1}" href="#">Operable</a></router-link>
+                                    <router-link :to="'/principal/entendible'"><a aria-label="Entendible" style="color: white" class="nav-link" @click="toggleActive(2);elementoSeleccionado('principio')" :class="{marcado: activeIndex==2}" href="#">Entendible</a></router-link>
+                                    <router-link :to="'/principal/robusto'"><a aria-label="Robusto" style="color: white" class="nav-link" @click="toggleActive(3);elementoSeleccionado('principio')" :class="{marcado: activeIndex==3}" href="#">Robusto</a></router-link>
                                 </nav>
                             </div>
 
-                            <a style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(4);elementoSeleccionado('conformidad')" :class="{marcado: activeIndex==4}" data-bs-target="#collapseConformidad" aria-expanded="false" aria-controls="collapsePages">
+                            <a aria-label="Conformidad" style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(4);elementoSeleccionado('conformidad')" :class="{marcado: activeIndex==4}" data-bs-target="#collapseConformidad" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="far fa-thumbs-up"></i></div>
                                 Conformidad
                                 <!--<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
                             </a>
 
-                            <a style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(5);elementoSeleccionado('herramienta')" :class="{marcado: activeIndex==5}" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <a aria-label="Herramientas" style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(5);elementoSeleccionado('herramienta')" :class="{marcado: activeIndex==5}" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                                 Herramientas
                             </a>
 
-                            <a style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(6);elementoSeleccionado('quien')" :class="{marcado: activeIndex==6}" data-bs-target="#collapseQuienes" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a aria-label="Quién soy" style="color: white" class="nav-link collapsed" href="#" data-bs-toggle="collapse" @click="toggleActive(6);elementoSeleccionado('quien')" :class="{marcado: activeIndex==6}" data-bs-target="#collapseQuienes" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fa-brands fa-readme"></i></div>
                                 ¿Quién soy?
                             </a>
