@@ -5,7 +5,7 @@
             <div class="container">
                 <h1><div class="masthead-subheading">¿Eres desarrollador?</div></h1>
                 <div class="masthead-heading text-uppercase">¡Bienvenido al catálogo de accesibilidad!</div>
-                <router-link aria-labelledby="Ir a la página principal" :to="{ name: 'Principal'}"><a class="btn btn-light btn-lg text-uppercase">Entra</a></router-link>
+                <router-link aria-labelledby="Ir a la página principal" :to="{ name: 'Principal'}"><a class="btn btn-light btn-lg text-uppercase">Ir a la página principal</a></router-link>
             </div>
         </header>
 
