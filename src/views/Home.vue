@@ -5,7 +5,7 @@
             <div class="container">
                 <h1><div class="masthead-subheading">¿Eres desarrollador?</div></h1>
                 <div class="masthead-heading text-uppercase">¡Bienvenido al catálogo de accesibilidad!</div>
-                <router-link aria-label="Entrar en la página principal" :to="{ name: 'Principal'}"><a class="btn btn-light btn-lg text-uppercase">Entra</a></router-link>
+                <router-link href="principal.html" :to="{ name: 'Principal'}"><a class="btn btn-light btn-lg text-uppercase">Entra</a></router-link>
             </div>
         </header>
 
@@ -18,7 +18,7 @@
                             <i class="fa-brands fa-android fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Android</h4>
-                        <p>Puedes realizar tu aplicación Android accesible!</p>
+                        <p>Puedes realizar tu aplicación Android accesible.</p>
                     </div>
                     <div class="col-md-4">
                         <span aria-hidden="true" class="fa-stack fa-4x">
