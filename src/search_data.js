@@ -57,12 +57,12 @@ export default {
                         "<br><br>" +
                         "<img src='./imagenes/roleatributoregion.PNG'/>" +
                         "<br><br>" +
-                        "<li>También se puede conseguir con el atributo 'aria-labelledby'</li>" +
+                        "<li>También se puede conseguir con el atributo 'aria-labelledby'.</li>" +
                         "<img src='./imagenes/arialabeledby.JPG'/>" +
                         "<br><br>" +
                         "<p>Para no perder información, es necesario que el orden de los componentes estén correctamente posicionados, para que así las tecnologías asistivas puedan orientar correctamente al usuario.</p>" +
                         "<p>Tampoco se tiene que bloquear la orientación del contenido(vertical u horizontal), a menos que sea ensencial.</p>" +
-                        "El propósito de cada campo de entrada se puede definir mediante programación cuando avisamos anteriormente de como estamos procesando los datos o el contenido se utiliza para identificar el significado esperado." +
+                        "El propósito de cada campo de entrada se puede definir mediante programación cuando avisamos anteriormente de como estamos procesando los datos o el contenido se utiliza para identificar el significado esperado. " +
                         "Podemos usar el atributo 'role' para que se pueda identificar el propósito de cada campo." +
                         "<br><img src='./imagenes/roleatributo.JPG'/>" +
                         "</p>"
@@ -91,8 +91,8 @@ export default {
                     tech: "web",
                     textoMostrado: "<p>Que toda la funcionalidad sea accesible desde el teclado. Con la tecla Tab o Tabuladora podemos movernos por la página y comprobar si se puede usar solamente el teclado. También lo podemos intentar para aquellas páginas donde se realice la función de arrastrar y soltar con las teclas del teclado en forma de flechas, o además podría añadirse una funcionalidad para cortar la foto y pegarla." +
                         " Los elementos más comunes de HTML permiten que se utilicen con el teclado. Estos elementos pueden ser &lt;a&gt;, &lt;button&gt;, &lt;fieldset&gt;, &lt;input&gt;, &lt;textarea&gt; y &lt;select&gt;." +
-                        "También tiene que ser posible que se quite el foco del teclado con el teclado, para que el usuario que no pueda usar el ratón no se quede atrapado en el contenido." +
-                        "Igualmente pueden existir atajos de teclado de un solo carácter, pero éstos tienen que tener la opción de poder ser modificados, quitados y activos solo cuando esté el foco en elemento correspondiente." +
+                        " También tiene que ser posible que se quite el foco del teclado con el teclado, para que el usuario que no pueda usar el ratón no se quede atrapado en el contenido." +
+                        " Igualmente pueden existir atajos de teclado de un solo carácter, pero éstos tienen que tener la opción de poder ser modificados, quitados y activos solo cuando esté el foco en elemento correspondiente." +
                         "</p>"
                 },
                 {
@@ -157,7 +157,7 @@ export default {
                     tech: "web",
                     textoMostrado: "<p>Que los usuarios puedan manejarse por el sitio web a través de dispositivos de entrada diferentes del teclado." +
                         "<p>Uno de los objetivos es asegurarse de que el contenido puede ser utilizado por un solo puntero en vez de muchos. Se debe de poder abortar o deshacer la acción en cualquier momento.</p>" +
-                        "<p>El tamaño del puntero objetivo del puntero tiene que ser de al menos 44 por 44 CSS pixels, o lo que es lo mismo 9mm cuadrados.</p>" +
+                        "<p>El tamaño del puntero objetivo tiene que ser de al menos 44 por 44 CSS pixels, o lo que es lo mismo 9mm cuadrados.</p>" +
                         "</p>"
                 },
                 //WEB ENTENDIBLE
@@ -262,8 +262,9 @@ export default {
                     textoMostrado: "<p>Es recomendable usar headers o cabeceras para estructurar bien el contenido. Una persona que esté usando tecnologías de apoyo, tendrá más fácil la navegación por la app. Pero los lectores de pantalla no conocen que campo de texto es un header. ¿Cómo podemos conseguir eso? Con el atributo 'android:accessibilityHeading'.</p>" +
                         "<img src='./imagenes/accesibilityheading.PNG'/ alt='Imagen cabecera'><br><br>" +
                         "<p>Otra manera de realizar la navegación más sencilla para las tecnologías de apoyo es agrupando los objetos. Para agruparlos, podemos realizar la vista 'focusable' o enfocable. Con los siguientes atributos podemos conseguirlo:</p>" +
-                        "<br><p>Con el atributo 'android:focusable' decimos que esta vista tendrá el foco y el atributo 'android:focusableInTouchMode' decimos que no se permite el modo toque. Esto quiero decir que solo tendrá el foco este elemento, cuando sea leído por un lector de pantalla. Al realizar esto, la vista se vuelve no clickable.</p>" +
+                        "<br><ul><li><p>Con el atributo 'android:focusable' decimos que esta vista tendrá el foco y el atributo 'android:focusableInTouchMode' decimos que no se permite el modo toque. Esto quiero decir que solo tendrá el foco este elemento, cuando sea leído por un lector de pantalla. Al realizar esto, la vista se vuelve no clickable.</p>" +
                         "<img src='./imagenes/focusable.PNG'/>" +
+                        "</li></ul>"+
                         "<br><br><p>Aunque no lo parezca, es importante indicar que la habilitación de orientación vertical y horizontal es necesaria.</p>" +
                         "<p>También, hay que destacar el uso de las etiquetas correctamente, porque un lector de pantalla puede leer una etiqueta y no saber a qué elemento se refiere. Por ese motivo usamos el atributo 'android:labelFor':</p>" +
                         "<img src='./imagenes/labelFor.PNG'/>" +
@@ -289,7 +290,7 @@ export default {
                     titulo: "entendible",
                     subtitulo: "Traducciones",
                     tech: "android",
-                    textoMostrado: "<p>A pesar de la operabilidad, y la perceptibilidad, nuestra app debe de ser entendible. Es por eso que debemos pensar en ciertos aspectos, como pueden ser la internacionalización, evitar grandes bloques de texto innecesarios, evitar palabras innecesarios que no se puedan entender o explicar abreviaciones, entre otros.</p>" +
+                    textoMostrado: "<p>A pesar de la operabilidad, y la perceptibilidad, nuestra app debe de ser entendible. Es por eso que debemos pensar en ciertos aspectos, como pueden ser la internacionalización, evitar grandes bloques de texto innecesarios, evitar palabras innecesarias que no se puedan entender o explicar abreviaciones, entre otros.</p>" +
                         "<p>Se recomienda guardar todas las cadenas de texto o 'strings' en el fichero 'strings.xml', dentro de la carpeta 'resources'. De esta manera podremos internacionalizar nuestra aplicación y podemos añadirle traducciones. Una vez añadidos todos los 'strings', para cambiar el idioma de nuestra app podremos realizarlo desde la configuración de nuestra teléfono.</p>"
                 },
                 //ANDROID ROBUSTO

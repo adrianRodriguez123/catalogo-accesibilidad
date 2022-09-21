@@ -80,7 +80,7 @@
                   </b-tab>
 
                   <b-tab title="Web">
-                    <div class="accordion" id="accordionExample">
+                    <div class="accordion" id="accordionExample2">
 
                       <div v-for="textoIndividual in principioElegido($route.params.prin, web)" :key="textoIndividual.id">
                         <div class="accordion-item">
@@ -89,7 +89,7 @@
                               {{textoIndividual.subtitulo}}
                             </button>
                           </h2>
-                          <div :id="['contenido' + textoIndividual.id]" class="accordion-collapse collapse" :aria-labelledby="['titulo' + textoIndividual.id]" data-bs-parent="#accordionExample">
+                          <div :id="['contenido' + textoIndividual.id]" class="accordion-collapse collapse" :aria-labelledby="['titulo' + textoIndividual.id]" data-bs-parent="#accordionExample2">
                             <div class="accordion-body">
                               <texto :textoComponente="textoIndividual"></texto>
                             </div>
